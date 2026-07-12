@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roberto Blanco — Apps &amp; IA on-device</title>
+<meta name="description" content="Desarrollador indie español: IA privada on-device, apps iOS y soluciones con datos. Creador de SyntheticMind, NeuroVocal Studio, VoiceCoachAI, NeoBlob y NeonPulse.">
+<meta name="theme-color" content="#0b0f0d">
+<style>
+  :root {
+    --bg: #0b0f0d; --bg-card: #131a16; --border: #223028;
+    --text: #e8f0ea; --muted: #93a89b; --accent: #3ddc84; --accent-dim: #2aa864;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 24px; }
+
+  header {
+    padding: 14px 0; border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; background: rgba(11,15,13,.94);
+    backdrop-filter: blur(8px); z-index: 10;
+  }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  .logo { font-weight: 700; font-size: 1.05rem; letter-spacing: -.02em; }
+  .logo span { color: var(--accent); }
+  nav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  nav a { color: var(--muted); text-decoration: none; font-size: .88rem; }
+  nav a:hover { color: var(--accent); }
+
+  .hero { text-align: center; padding: 70px 0 50px; }
+  .hero h1 { font-size: clamp(1.9rem, 5.5vw, 3.2rem); letter-spacing: -.03em; line-height: 1.12; font-weight: 800; }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.sub { margin: 18px auto 0; max-width: 620px; color: var(--muted); font-size: 1.12rem; }
+
+  section.app { padding: 60px 0; border-top: 1px solid var(--border); }
+  .cabecera-app { display: flex; align-items: center; gap: 18px; margin-bottom: 6px; flex-wrap: wrap; }
+  .cabecera-app img.icono {
+    width: 76px; height: 76px; border-radius: 18px;
+    border: 1px solid var(--border); flex: none;
+  }
+  .cabecera-app h2 { font-size: clamp(1.4rem, 4vw, 1.9rem); letter-spacing: -.02em; }
+  .meta { color: var(--muted); font-size: .88rem; margin-top: 2px; }
+  .meta b { color: var(--accent); font-weight: 600; }
+
+  .desc { max-width: 720px; margin: 18px 0 6px; color: var(--text); }
+  .desc p { margin-bottom: 12px; }
+  .desc ul { margin: 0 0 12px 0; padding-left: 0; list-style: none; }
+  .desc li { color: var(--muted); padding-left: 22px; position: relative; margin-bottom: 6px; font-size: .95rem; }
+  .desc li::before { content: "•"; color: var(--accent); position: absolute; left: 6px; }
+
+  .capturas { display: flex; gap: 14px; margin: 24px 0 20px; overflow-x: auto; padding-bottom: 8px; }
+  .capturas img {
+    height: 440px; border-radius: 22px; border: 1px solid var(--border);
+    flex: none; background: var(--bg-card);
+  }
+  @media (max-width: 600px) { .capturas img { height: 340px; } }
+
+  .enlaces { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { display: inline-block; padding: 11px 26px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: .95rem; }
+  .btn-primary { background: var(--accent); color: #06130b; }
+  .btn-primary:hover { background: var(--accent-dim); }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--accent-dim); }
+
+  section.plana { padding: 60px 0; border-top: 1px solid var(--border); }
+  section.plana h2 { font-size: clamp(1.5rem, 4vw, 2rem); letter-spacing: -.02em; margin-bottom: 6px; }
+  .lead { color: var(--muted); max-width: 640px; margin-bottom: 32px; }
+  .servicio { display: flex; gap: 16px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .servicio:last-child { border-bottom: none; }
+  .servicio .icono-s { font-size: 1.5rem; flex: none; }
+  .servicio h3 { font-size: 1.05rem; margin-bottom: 4px; }
+  .servicio p { color: var(--muted); font-size: .95rem; }
+
+  footer { border-top: 1px solid var(--border); padding: 40px 0; color: var(--muted); font-size: .9rem; text-align: center; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">Roberto <span>Blanco</span></div>
+    <nav>
+      <a href="#syntheticmind">SyntheticMind</a>
+      <a href="#neurovocal">NeuroVocal</a>
+      <a href="#voicecoach">VoiceCoachAI</a>
+      <a href="#neoblob">NeoBlob</a>
+      <a href="#neonpulse">NeonPulse</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <h1>Construyo apps e <em>IA que vive en tu dispositivo</em></h1>
+  <p class="sub">Desarrollador indie español. Cinco apps publicadas en el App Store, un motor
+     cognitivo en Rust y una obsesión: que tus datos no salgan de tu bolsillo.</p>
+</section>
+
+<!-- ═══════════════ SYNTHETICMIND ═══════════════ -->
+<section class="app" id="syntheticmind">
+  <div class="wrap">
+    <div class="cabecera-app">
+      <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg" alt="SyntheticMind">
+      <div>
+        <h2>SyntheticMind</h2>
+        <div class="meta"><b>IA privada y local</b> · Productividad · 9,99 € · iPhone</div>
+      </div>
+    </div>
+    <div class="desc">
+      <p>Un asistente de inteligencia artificial construido alrededor de una idea simple:
+         <b>tus conversaciones son tuyas y deben quedarse contigo</b>. A diferencia de otros asistentes,
+         SyntheticMind ejecuta el modelo de IA íntegramente en tu iPhone: no hay servidores procesando
+         lo que escribes, no hay cuentas que crear y no hay perfiles que rastreen tu actividad.
+         Funciona incluso en modo avión.</p>
+      <ul>
+        <li><b>Privado por diseño</b>: todo el procesamiento ocurre en tu dispositivo; sin registro, sin correo, sin rastreadores.</li>
+        <li><b>Derecho español fundamentado</b>: responde sobre legislación con el texto real del BOE, artículo a artículo.</li>
+        <li><b>Respuestas que puedes seguir</b>: cada respuesta muestra qué fuentes se consultaron y el razonamiento detrás.</li>
+        <li><b>Memoria local</b>: recuerda el contexto de tus conversaciones en una memoria que vive solo en tu móvil, y que puedes borrar cuando quieras.</li>
+        <li><b>Lee tus documentos</b>: importa PDFs o hazle una foto a una nota; la entiende sin salir del dispositivo.</li>
+      </ul>
+    </div>
+    <div class="capturas">
+      <img src="img/syntheticmind-1.png" alt="SyntheticMind — captura 1" onerror="this.style.display='none'">
+      <img src="img/syntheticmind-2.png" alt="SyntheticMind — captura 2" onerror="this.style.display='none'">
+      <img src="img/syntheticmind-3.png" alt="SyntheticMind — captura 3" onerror="this.style.display='none'">
+    </div>
+    <div class="enlaces">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/syntheticmind/id6774833296">Descargar en el App Store</a>
+      <a class="btn btn-ghost" href="https://robertoblanco-lab.github.io/syntheticmind-web/">Probar en el navegador</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NEUROVOCAL STUDIO ═══════════════ -->
+<section class="app" id="neurovocal">
+  <div class="wrap">
+    <div class="cabecera-app">
+      <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeuroVocal Studio">
+      <div>
+        <h2>NeuroVocal Studio</h2>
+        <div class="meta"><b>Analizador de voz</b> · Educación · 14,99 € · iPhone y iPad · ★★★★★</div>
+      </div>
+    </div>
+    <div class="desc">
+      <p>Una herramienta avanzada de análisis de voz diseñada para ofrecer <b>veredictos claros,
+         rápidos y precisos</b>. Su algoritmo detecta variaciones acústicas sutiles, analiza patrones
+         vocales y genera una interpretación fiable a partir de cualquier grabación de audio o vídeo.</p>
+      <ul>
+        <li>Analiza grabaciones de audio y vídeo con resultados al momento.</li>
+        <li>Detecta matices acústicos que el oído no percibe y los traduce a una lectura comprensible.</li>
+        <li>Alertas dinámicas que reflejan la intensidad real del discurso durante la reproducción.</li>
+        <li>Disponible en cinco idiomas: español, inglés, francés, chino y catalán.</li>
+      </ul>
+    </div>
+    <div class="capturas">
+      <img src="img/neurovocal-1.png" alt="NeuroVocal — captura 1" onerror="this.style.display='none'">
+      <img src="img/neurovocal-2.png" alt="NeuroVocal — captura 2" onerror="this.style.display='none'">
+      <img src="img/neurovocal-3.png" alt="NeuroVocal — captura 3" onerror="this.style.display='none'">
+    </div>
+    <div class="enlaces">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/neurovocal-studio/id6748546482">Descargar en el App Store</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ VOICECOACHAI ═══════════════ -->
+<section class="app" id="voicecoach">
+  <div class="wrap">
+    <div class="cabecera-app">
+      <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="VoiceCoachAI">
+      <div>
+        <h2>VoiceCoachAI</h2>
+        <div class="meta"><b>Coach de voz intuitivo</b> · Estilo de vida · 5,99 € · iPhone y iPad</div>
+      </div>
+    </div>
+    <div class="desc">
+      <p>Tu voz refleja matices de emoción, tensión, claridad y estado interno. VoiceCoachAI analiza
+         esas señales acústicas — variabilidad, ritmo, coherencia, comportamiento del tono — y las
+         interpreta en tiempo real para ofrecerte <b>una lectura orientativa de cómo te expresas y cómo
+         te encuentras</b>. No es solo análisis: es una nueva forma de escucharte.</p>
+      <ul>
+        <li>Análisis de voz en tiempo real: graba unos segundos y recibe feedback inmediato.</li>
+        <li>Detección de estados: tensión, duda, claridad o calma.</li>
+        <li>Feedback tipo coach, con frases breves y naturales que ayudan a avanzar.</li>
+        <li>Sistema adaptativo que aprende de tus patrones con el uso.</li>
+        <li>Todo el procesamiento en el dispositivo: sin IA de terceros, sin enviar audio ni datos fuera.</li>
+      </ul>
+      <p style="color:var(--muted); font-size:.85rem">No es una herramienta médica ni diagnóstica; la información es orientativa.</p>
+    </div>
+    <div class="capturas">
+      <img src="img/voicecoach-1.png" alt="VoiceCoachAI — captura 1" onerror="this.style.display='none'">
+      <img src="img/voicecoach-2.png" alt="VoiceCoachAI — captura 2" onerror="this.style.display='none'">
+      <img src="img/voicecoach-3.png" alt="VoiceCoachAI — captura 3" onerror="this.style.display='none'">
+    </div>
+    <div class="enlaces">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/voicecoachai/id6761835018">Descargar en el App Store</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NEOBLOB ═══════════════ -->
+<section class="app" id="neoblob">
+  <div class="wrap">
+    <div class="cabecera-app">
+      <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeoBlob">
+      <div>
+        <h2>NeoBlob</h2>
+        <div class="meta"><b>Mini-juego psicodélico chill</b> · Juegos · Gratis · iPhone y iPad</div>
+      </div>
+    </div>
+    <div class="desc">
+      <p>Un <b>mini-viaje psicodélico interactivo</b>: una bola luminosa que parece viva, fondos en
+         movimiento y música chill para desconectar unos minutos. Sin prisas ni estrés — controles
+         simples, estética cuidada y una sensación de flujo continuo entre niveles.</p>
+      <ul>
+        <li>Toca y arrastra la esfera: cambia de color, deja estela y rebota con una física relajada.</li>
+        <li>Activa rayos de luz que bajan por caminos sinuosos sincronizados con la bola central.</li>
+        <li>Orbita planetas psicodélicos hasta completar la vuelta y "apagarlos".</li>
+        <li>Una música distinta por nivel para una experiencia más envolvente.</li>
+      </ul>
+    </div>
+    <div class="capturas">
+      <img src="img/neoblob-1.png" alt="NeoBlob — captura 1" onerror="this.style.display='none'">
+      <img src="img/neoblob-2.png" alt="NeoBlob — captura 2" onerror="this.style.display='none'">
+      <img src="img/neoblob-3.png" alt="NeoBlob — captura 3" onerror="this.style.display='none'">
+    </div>
+    <div class="enlaces">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/neoblob/id6756328613">Descargar gratis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NEONPULSE ═══════════════ -->
+<section class="app" id="neonpulse">
+  <div class="wrap">
+    <div class="cabecera-app">
+      <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeonPulse">
+      <div>
+        <h2>NeonPulse</h2>
+        <div class="meta"><b>Arrastra. Fusiona. Evoluciona.</b> · Puzle · Gratis · iPhone y iPad</div>
+      </div>
+    </div>
+    <div class="desc">
+      <p>Un juego de <b>puzles visuales y estratégicos</b> en un universo de energía neón y alquimia
+         futurista. El objetivo es simple de entender y desafiante de dominar: arrastra piezas por el
+         tablero, fusiona símbolos y evoluciona sus formas hasta dejar una única pieza final.</p>
+      <ul>
+        <li>Sistema de fusión original basado en la evolución de símbolos.</li>
+        <li>Cada símbolo reacciona distinto según la combinación: algunas fusiones evolucionan piezas, otras transforman el tablero entero.</li>
+        <li>Mecánicas fáciles de aprender, profundas de dominar; niveles progresivamente más complejos.</li>
+        <li>Estética premium de neón con animaciones fluidas — relajante pero exigente con tu lógica.</li>
+      </ul>
+    </div>
+    <div class="capturas">
+      <img src="img/neonpulse-1.png" alt="NeonPulse — captura 1" onerror="this.style.display='none'">
+      <img src="img/neonpulse-2.png" alt="NeonPulse — captura 2" onerror="this.style.display='none'">
+      <img src="img/neonpulse-3.png" alt="NeonPulse — captura 3" onerror="this.style.display='none'">
+    </div>
+    <div class="enlaces">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/neonpulse/id6768053282">Descargar gratis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SERVICIOS ═══════════════ -->
+<section class="plana" id="servicios">
+  <div class="wrap">
+    <h2>Servicios</h2>
+    <p class="lead">Lo mismo que hago para mis productos, para tu proyecto.</p>
+
+    <div class="servicio">
+      <div class="icono-s">🧠</div>
+      <div>
+        <h3>IA privada para tu negocio</h3>
+        <p>Asistentes de IA que funcionan con tus datos sin que salgan de tu empresa: RAG sobre documentación
+           propia, verificación de fuentes y ejecución local. Ideal para sectores con requisitos de
+           confidencialidad (legal, salud, administración).</p>
+      </div>
+    </div>
+    <div class="servicio">
+      <div class="icono-s">📱</div>
+      <div>
+        <h3>Desarrollo de apps iOS</h3>
+        <p>De la idea al App Store: diseño, desarrollo en Swift, integración de IA on-device, optimización
+           y publicación. Cinco apps propias publicadas avalan el proceso completo.</p>
+      </div>
+    </div>
+    <div class="servicio">
+      <div class="icono-s">⚡</div>
+      <div>
+        <h3>Web con IA a coste cero de servidor</h3>
+        <p>Aplicaciones web donde la IA corre en el navegador del usuario (WebGPU + WebAssembly): sin
+           servidores que pagar ni datos que custodiar.</p>
+      </div>
+    </div>
+    <div class="servicio">
+      <div class="icono-s">📊</div>
+      <div>
+        <h3>Datos abiertos y automatización</h3>
+        <p>Ingesta y explotación de datos públicos (BOE, portales de datos abiertos, APIs oficiales) para
+           convertirlos en productos útiles: buscadores, asistentes, informes automáticos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACTO ═══════════════ -->
+<section class="plana" id="contacto">
+  <div class="wrap" style="text-align:center">
+    <h2>¿Hablamos?</h2>
+    <p class="lead" style="margin: 8px auto 26px">Cuéntame tu idea y te digo cómo la haría — sin compromiso.</p>
+    <a class="btn btn-primary" href="mailto:roberto34t10@gmail.com">Escríbeme</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Roberto Blanco — desarrollador indie · España<br>
+    <a href="https://apps.apple.com/es/developer/roberto-blanco-gomez/id1824789786">Todas mis apps en el App Store</a>
+    · <a href="https://robertoblanco-lab.github.io/syntheticmind-web/">SyntheticMind Web</a>
+  </div>
+</footer>
+
+<!-- Contador de visitas: GoatCounter (sin cookies, sin rastreo personal) -->
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
