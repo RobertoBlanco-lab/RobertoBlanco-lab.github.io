@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SyntheticMind — IA privada on-device · Roberto Blanco</title>
+<meta name="description" content="Cómo está construida SyntheticMind: motor cognitivo en Rust, Qwen on-device, grounding en el BOE y datos abiertos, y el mismo motor en WebAssembly.">
+<meta name="theme-color" content="#070b09">
+<link rel="stylesheet" href="estilo.css">
+<style>body { --acc: var(--verde); }</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>IA privada on-device</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Analizador de voz</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Coach de voz</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Juego chill psicodélico</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Puzle de fusión neón</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--verde);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg" alt="SyntheticMind">
+    <h1>SyntheticMind</h1>
+    <div class="tag">Tu IA. 100% privada.</div>
+    <div class="meta">Productividad · 9,99 € · iPhone (iOS 16+) · 3,8 GB</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/syntheticmind/id6774833296">Descargar en el App Store</a>
+      <a class="btn btn-ghost" href="https://robertoblanco-lab.github.io/syntheticmind-web/">Probar en el navegador</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Qué hace</h2>
+    <p class="intro">Un asistente de IA que razona, recuerda y responde <b>íntegramente dentro de tu iPhone</b>.
+       Sin servidores procesando lo que escribes, sin cuentas, sin rastreo. Funciona en modo avión — esa es la prueba.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>El BOE en tu bolsillo</b>Derecho español con el texto real del BOE, artículo a artículo. Pregunta por el 348 bis de la LSC y te da el texto oficial.</div>
+      <div class="rasgo"><b>Datos abiertos oficiales</b>Portales de Castilla y León, Asturias y Madrid, ingeridos y consultables sin conexión.</div>
+      <div class="rasgo"><b>Sello de verificación</b>Cada respuesta muestra sus fuentes, fragmentos y confianza. Transparencia, no caja negra.</div>
+      <div class="rasgo"><b>Memoria local</b>Contexto entre conversaciones en una memoria que vive solo en tu móvil, borrable cuando quieras.</div>
+      <div class="rasgo"><b>Visión y voz</b>Fotografía una nota o importa un PDF: los entiende en el dispositivo. Dicta y escucha en español.</div>
+      <div class="rasgo"><b>Modo avión</b>Toda la inteligencia es local: modelo, corpus, memoria y razonamiento.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Cómo está construida</h2>
+    <p class="intro">Dos plataformas, un solo motor: el núcleo cognitivo en Rust se compila nativo para iOS
+       y a WebAssembly para el navegador, con las mismas garantías de verificación en ambos.</p>
+    <div class="pipeline">
+      <div class="paso"><b>Núcleo cognitivo en Rust.</b> Orquestador multicapa con módulos de razonamiento, memoria, comprensión, planificación y seguridad. Puente a Swift vía <span class="mono">UniFFI</span>.</div>
+      <div class="paso"><b>Inferencia on-device.</b> Modelo Qwen afinado, ejecutado con <span class="mono">llama.cpp</span> acelerado por Metal en el iPhone; Qwen 2.5 vía <span class="mono">WebLLM + WebGPU</span> en el navegador.</div>
+      <div class="paso"><b>Base de conocimiento local.</b> SQLite en modo WAL con cifrado en reposo: 5.300 artículos del BOE parseados artículo a artículo más 9.000 registros de datos abiertos autonómicos, ingeridos con pipelines idempotentes.</div>
+      <div class="paso"><b>Grounding anti-alucinación.</b> Detección de citas explícitas ("artículo 348 bis de la LSC" → texto oficial), retrieval por solape de términos con umbrales, e informe de fuerza de fundamentación que decide entre respuesta fundada o prudente.</div>
+      <div class="paso"><b>Verificación de salida.</b> Un verificador contrasta las citas de la respuesta contra el corpus real e imputa riesgo a las inexistentes antes de mostrar nada al usuario.</div>
+      <div class="paso"><b>Versión web a coste cero.</b> El mismo motor de grounding compilado a WASM con <span class="mono">wasm-bindgen</span>, corpus como JSON estático, PWA instalable y GitHub Pages como único "servidor".</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Lenguajes</span><b>Rust + Swift (+ WASM)</b></div>
+      <div class="dato"><span>Modelo</span><b>Qwen afinado, on-device</b></div>
+      <div class="dato"><span>Corpus</span><b>14.000+ documentos oficiales</b></div>
+      <div class="dato"><span>Datos recopilados</span><b>Ninguno</b></div>
+      <div class="dato"><span>Coste de nube</span><b>0 €</b></div>
+      <div class="dato"><span>Infraestructura web</span><b>GitHub Pages (estático)</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>En pantalla</h2>
+    <div class="capturas">
+      <img src="img/syntheticmind-1.png" alt="SyntheticMind — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/syntheticmind-2.png" alt="SyntheticMind — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/syntheticmind-3.png" alt="SyntheticMind — captura 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/syntheticmind/id6774833296">Descargar en el App Store</a>
+      <a class="btn btn-ghost" href="https://robertoblanco-lab.github.io/syntheticmind-web/">Probar en el navegador</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al portfolio</a> · Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+
+<script>
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

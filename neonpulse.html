@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeonPulse — Puzle de fusión neón · Roberto Blanco</title>
+<meta name="description" content="La lógica de NeonPulse: tablero de símbolos con reglas de reacción, fusiones que evolucionan piezas y niveles que se resuelven reduciendo todo a una única pieza.">
+<meta name="theme-color" content="#070b09">
+<link rel="stylesheet" href="estilo.css">
+<style>body { --acc: var(--cian); } .btn-primary { color: #04211c; }</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>IA privada on-device</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Analizador de voz</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Coach de voz</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Juego chill psicodélico</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Puzle de fusión neón</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--cian);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeonPulse">
+    <h1>NeonPulse</h1>
+    <div class="tag">Arrastra. Fusiona. Evoluciona.</div>
+    <div class="meta">Puzle · Gratis · iPhone y iPad</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/neonpulse/id6768053282">Descargar gratis</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Qué es</h2>
+    <p class="intro">Un juego de <b>puzles visuales y estratégicos</b> en un universo de energía neón y alquimia
+       futurista. El objetivo es simple de entender y desafiante de dominar: arrastra piezas por el tablero,
+       fusiona símbolos y evoluciona sus formas <b>hasta dejar una única pieza final</b>.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Fusión con personalidad</b>Cada símbolo tiene propiedades propias y reacciona distinto según con qué lo combines.</div>
+      <div class="rasgo"><b>Cada movimiento importa</b>Un pequeño cambio puede transformar por completo el resultado del puzle.</div>
+      <div class="rasgo"><b>Progresión inteligente</b>Mecánicas nuevas y combinaciones inesperadas a medida que avanzas.</div>
+      <div class="rasgo"><b>Estética premium</b>Neón, animaciones fluidas y una atmósfera hipnótica — relajante pero exigente.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>La lógica del puzle</h2>
+    <p class="intro">Bajo la estética hay un sistema de reglas puro — un pequeño motor de estados donde
+       cada nivel es un problema de reducción.</p>
+    <div class="pipeline">
+      <div class="paso"><b>El tablero como estado.</b> Cada nivel es una configuración de celdas y símbolos. Cada arrastre produce una transición de estado: el juego es, en el fondo, navegar un espacio de estados hasta el que tiene una sola pieza.</div>
+      <div class="paso"><b>Reglas de reacción.</b> Al juntar dos símbolos se consulta su regla: fusionar y evolucionar la forma, transformar el tablero entero, o abrir la puerta a deshacer un paso para explorar otra rama de solución.</div>
+      <div class="paso"><b>Evolución de símbolos.</b> Las piezas no se suman: evolucionan. Una cadena de fusiones correcta desbloquea transformaciones avanzadas capaces de cambiar el estado global y obligarte a replantear la estrategia.</div>
+      <div class="paso"><b>Diseño de niveles.</b> Cada nivel se construye para que existan soluciones falsas atractivas: lo fácil casi funciona, y descubrir por qué no es la gracia del puzle.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Género</span><b>Puzle de lógica</b></div>
+      <div class="dato"><span>Mecánica central</span><b>Fusión + evolución de símbolos</b></div>
+      <div class="dato"><span>Condición de victoria</span><b>Reducir a una única pieza</b></div>
+      <div class="dato"><span>Precio</span><b>Gratis</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>En pantalla</h2>
+    <div class="capturas">
+      <img src="img/neonpulse-1.png" alt="NeonPulse — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/neonpulse-2.png" alt="NeonPulse — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/neonpulse-3.png" alt="NeonPulse — captura 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/es/app/neonpulse/id6768053282">Descargar gratis</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al portfolio</a> · Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+
+<script>
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

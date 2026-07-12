@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoiceCoachAI — Coach de voz intuitivo · Roberto Blanco</title>
+<meta name="description" content="Cómo funciona VoiceCoachAI: análisis de voz en tiempo real, interpretación contextual y feedback tipo coach — todo en el dispositivo.">
+<meta name="theme-color" content="#070b09">
+<link rel="stylesheet" href="estilo.css">
+<style>body { --acc: var(--naranja); } .btn-primary { color: #1a1104; }</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>IA privada on-device</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Analizador de voz</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Coach de voz</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Juego chill psicodélico</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Puzle de fusión neón</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--naranja);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="VoiceCoachAI">
+    <h1>VoiceCoachAI</h1>
+    <div class="tag">Coach de voz intuitivo</div>
+    <div class="meta">Estilo de vida · 5,99 € · iPhone y iPad · 5 idiomas</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/voicecoachai/id6761835018">Descargar en el App Store</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Qué hace</h2>
+    <p class="intro">Tu voz refleja emoción, tensión, claridad y estado interno. VoiceCoachAI escucha unos segundos
+       y te devuelve <b>una lectura orientativa de cómo te expresas y cómo te encuentras</b> — con feedback breve
+       y natural, como lo haría un coach. No es solo análisis: es una nueva forma de escucharte.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Tiempo real</b>Habla unos segundos y recibe el feedback al momento.</div>
+      <div class="rasgo"><b>Estados emocionales</b>Identifica señales de tensión, duda, claridad o calma.</div>
+      <div class="rasgo"><b>Feedback tipo coach</b>Frases breves que ayudan a entender tu estado y avanzar — sin juzgar ni etiquetar.</div>
+      <div class="rasgo"><b>Cuándo usarla</b>Antes de una conversación importante, después de un momento intenso, o para ganar conciencia.</div>
+    </div>
+    <p style="color:var(--muted); font-size:.85rem; margin-top:14px">No es una herramienta médica ni diagnóstica; la información es orientativa.</p>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Cómo funciona por dentro</h2>
+    <p class="intro">Todo el procesamiento ocurre <b>en el dispositivo</b>: sin servicios de IA de terceros,
+       sin enviar audio, texto ni datos fuera, sin almacenar nada en servidores externos.</p>
+    <div class="pipeline">
+      <div class="paso"><b>Captura y extracción de rasgos.</b> De la voz se procesan múltiples dimensiones en tiempo real: variabilidad, ritmo, coherencia y comportamiento del tono.</div>
+      <div class="paso"><b>Interpretación contextual.</b> Las señales acústicas se combinan con un motor de interpretación que distingue temas principales y secundarios del discurso para situar la lectura.</div>
+      <div class="paso"><b>Generación del feedback.</b> El estado detectado se traduce a frases de coach naturales y breves, repartidas entre áreas como trabajo, propósito y relaciones.</div>
+      <div class="paso"><b>Sistema adaptativo.</b> Con el uso, la app detecta patrones repetidos en el tiempo y ajusta sus lecturas a tu forma de hablar.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Procesamiento</span><b>100% en el dispositivo</b></div>
+      <div class="dato"><span>IA de terceros</span><b>Ninguna</b></div>
+      <div class="dato"><span>Análisis</span><b>Tiempo real</b></div>
+      <div class="dato"><span>Tamaño</span><b>~12 MB</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>En pantalla</h2>
+    <div class="capturas">
+      <img src="img/voicecoach-1.png" alt="VoiceCoachAI — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/voicecoach-2.png" alt="VoiceCoachAI — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/voicecoach-3.png" alt="VoiceCoachAI — captura 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/es/app/voicecoachai/id6761835018">Descargar en el App Store</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al portfolio</a> · Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+
+<script>
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* Roberto Blanco — portfolio · estilos compartidos */
+:root {
+  --bg: #070b09; --bg2: #0d1210; --card: rgba(255,255,255,.03);
+  --border: rgba(255,255,255,.09); --text: #eef4f0; --muted: #97a89d;
+  --verde: #3ddc84; --violeta: #a78bfa; --naranja: #fbbf6d;
+  --rosa: #f47ab6; --cian: #5eead4; --acc: var(--verde);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65; overflow-x: hidden;
+}
+.wrap { max-width: 1020px; margin: 0 auto; padding: 0 24px; position: relative; }
+
+/* ── Brillos de fondo ── */
+.orbe {
+  position: absolute; border-radius: 50%; filter: blur(90px);
+  opacity: .15; pointer-events: none; z-index: 0;
+  animation: flotar 14s ease-in-out infinite alternate;
+}
+@keyframes flotar { from { transform: translateY(-25px) } to { transform: translateY(25px) } }
+@media (prefers-reduced-motion: reduce) { .orbe { animation: none } }
+
+/* ── Navegación ── */
+header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(7,11,9,.75); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+header .wrap { display: flex; align-items: center; justify-content: space-between; padding-top: 13px; padding-bottom: 13px; flex-wrap: wrap; gap: 8px; }
+.logo { font-weight: 800; font-size: 1.05rem; letter-spacing: -.02em; text-decoration: none; color: var(--text); }
+.logo span { color: var(--verde); }
+nav { display: flex; flex-wrap: wrap; gap: 2px; }
+nav a {
+  color: var(--muted); text-decoration: none; font-size: .84rem;
+  padding: 5px 11px; border-radius: 999px; transition: all .2s;
+}
+nav a:hover, nav a.activo { color: var(--text); background: rgba(255,255,255,.06); }
+
+/* ── Botones ── */
+.btn {
+  display: inline-block; padding: 14px 30px; border-radius: 14px;
+  text-decoration: none; font-weight: 700; font-size: .98rem; transition: all .2s;
+}
+.btn-primary { background: var(--acc); color: #05130a; box-shadow: 0 8px 30px color-mix(in srgb, var(--acc) 25%, transparent); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 36px color-mix(in srgb, var(--acc) 40%, transparent); }
+.btn-ghost { border: 1px solid var(--border); color: var(--text); background: var(--card); }
+.btn-ghost:hover { border-color: rgba(255,255,255,.25); transform: translateY(-2px); }
+.cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ── Secciones genéricas ── */
+section { position: relative; }
+.titulo-seccion { text-align: center; margin-bottom: 50px; }
+.titulo-seccion h2 { font-size: clamp(1.7rem, 4.5vw, 2.5rem); font-weight: 800; letter-spacing: -.03em; }
+.titulo-seccion p { color: var(--muted); margin-top: 10px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+/* ── Rasgos (mini tarjetas) ── */
+.rasgos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; margin: 18px 0 8px; }
+.rasgo {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 13px 16px; font-size: .92rem; color: var(--muted);
+}
+.rasgo b { color: var(--text); display: block; margin-bottom: 2px; font-size: .95rem; }
+.rasgo b::before { content: "✦ "; color: var(--acc); }
+
+/* ── Capturas ── */
+.capturas { display: flex; gap: 18px; margin: 30px 0 26px; overflow-x: auto; padding: 6px 2px 12px; }
+.capturas img {
+  height: 460px; border-radius: 30px; flex: none;
+  border: 6px solid #1a211d; outline: 1px solid var(--border);
+  background: var(--bg2); box-shadow: 0 20px 50px rgba(0,0,0,.55);
+  transition: transform .25s;
+}
+.capturas img:hover { transform: translateY(-6px) scale(1.012); }
+@media (max-width: 600px) { .capturas img { height: 350px } }
+
+/* ── Páginas de app ── */
+.hero-app { padding: 90px 0 40px; text-align: center; position: relative; }
+.hero-app img.icono {
+  width: 120px; height: 120px; border-radius: 28px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 60px rgba(0,0,0,.6), 0 0 46px color-mix(in srgb, var(--acc) 26%, transparent);
+  margin-bottom: 26px;
+}
+.hero-app h1 { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 800; letter-spacing: -.03em; }
+.hero-app .tag { color: var(--acc); font-weight: 700; font-size: 1.15rem; margin-top: 6px; }
+.hero-app .meta { color: var(--muted); font-size: .9rem; margin-top: 8px; }
+.hero-app .cta { justify-content: center; margin-top: 32px; }
+
+.bloque { padding: 50px 0; }
+.bloque + .bloque { border-top: 1px solid var(--border); }
+.bloque h2 { font-size: clamp(1.4rem, 4vw, 1.9rem); font-weight: 800; letter-spacing: -.025em; margin-bottom: 6px; }
+.bloque h2::before { content: "▮ "; color: var(--acc); }
+.bloque > .wrap > p.intro { color: var(--muted); max-width: 720px; margin-bottom: 26px; }
+.bloque p { max-width: 740px; }
+.bloque p + p { margin-top: 12px; }
+.bloque b { color: var(--text); }
+
+/* Pipeline técnico (pasos numerados) */
+.pipeline { counter-reset: paso; display: grid; gap: 12px; margin: 22px 0 6px; max-width: 760px; }
+.paso {
+  counter-increment: paso; position: relative;
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 15px 18px 15px 62px; font-size: .94rem; color: var(--muted);
+}
+.paso::before {
+  content: counter(paso); position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+  width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: color-mix(in srgb, var(--acc) 18%, transparent); color: var(--acc); font-weight: 800; font-size: .9rem;
+}
+.paso b { color: var(--text); }
+
+/* Ficha técnica (tabla de datos) */
+.ficha { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 22px; }
+.dato { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; }
+.dato span { display: block; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+.dato b { font-size: .98rem; }
+
+/* Código / detalles mono */
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .85em; color: var(--acc); }
+
+footer { border-top: 1px solid var(--border); padding: 44px 0; color: var(--muted); font-size: .9rem; text-align: center; }
+footer a { color: var(--muted); }
+footer a:hover { color: var(--verde); }
+
+/* ── Menú desplegable de apps ── */
+.desplegable { position: relative; }
+.desplegable > button {
+  color: var(--muted); background: none; border: none; cursor: pointer;
+  font: inherit; font-size: .84rem; padding: 5px 11px; border-radius: 999px; transition: all .2s;
+}
+.desplegable > button:hover, .desplegable.abierto > button { color: var(--text); background: rgba(255,255,255,.06); }
+.menu-apps {
+  position: absolute; top: calc(100% + 10px); left: 0; min-width: 250px;
+  background: rgba(13,18,16,.97); backdrop-filter: blur(14px);
+  border: 1px solid var(--border); border-radius: 16px; padding: 8px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.6);
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: all .18s ease; z-index: 60;
+}
+.desplegable.abierto .menu-apps { opacity: 1; visibility: visible; transform: none; }
+.menu-apps a {
+  display: flex; align-items: center; gap: 12px; padding: 9px 12px;
+  border-radius: 11px; text-decoration: none; color: var(--text); font-size: .9rem;
+}
+.menu-apps a:hover { background: rgba(255,255,255,.06); }
+.menu-apps img { width: 34px; height: 34px; border-radius: 9px; border: 1px solid var(--border); }
+.menu-apps small { display: block; color: var(--muted); font-size: .76rem; line-height: 1.3; }
+
+/* ── Aparición al hacer scroll ── */
+.rev { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.rev.visto { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .rev { opacity: 1; transform: none; transition: none } }

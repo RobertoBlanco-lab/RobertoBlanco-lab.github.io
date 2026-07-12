@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuroVocal Studio — Analizador de voz · Roberto Blanco</title>
+<meta name="description" content="Cómo funciona NeuroVocal Studio: extracción de variables acústicas, fusión variable a variable y capa ML ligera — todo en el dispositivo.">
+<meta name="theme-color" content="#070b09">
+<link rel="stylesheet" href="estilo.css">
+<style>body { --acc: var(--violeta); }</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>IA privada on-device</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Analizador de voz</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Coach de voz</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Juego chill psicodélico</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Puzle de fusión neón</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--violeta);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeuroVocal Studio">
+    <h1>NeuroVocal Studio</h1>
+    <div class="tag">Analizador de voz</div>
+    <div class="meta">Educación · 14,99 € · iPhone y iPad · ★★★★★ · 5 idiomas</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/neurovocal-studio/id6748546482">Descargar en el App Store</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Qué hace</h2>
+    <p class="intro">Analiza cualquier grabación de audio o vídeo y devuelve <b>veredictos claros, rápidos y precisos</b>
+       sobre lo que hay detrás de la voz: detecta variaciones acústicas sutiles que el oído no percibe
+       y las traduce a una interpretación comprensible.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Audio y vídeo</b>Importa una grabación o graba directamente; el análisis sale al momento.</div>
+      <div class="rasgo"><b>Alertas dinámicas</b>Durante la reproducción, la intensidad real del discurso se refleja en una línea de tiempo viva.</div>
+      <div class="rasgo"><b>Interpretación fiable</b>No enseña gráficas crudas: convierte las señales en un veredicto que cualquiera entiende.</div>
+      <div class="rasgo"><b>5 idiomas</b>Español, inglés, francés, chino y catalán.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Cómo funciona por dentro</h2>
+    <p class="intro">El corazón es un motor de análisis con <b>fusión variable a variable y una capa de
+       machine learning ligera</b> — diseñado para correr entero en el dispositivo, sin enviar audio a ningún servidor.</p>
+    <div class="pipeline">
+      <div class="paso"><b>Extracción de variables acústicas.</b> De la señal se extraen múltiples dimensiones: tono y su comportamiento, energía, ritmo, pausas y microvariaciones que escapan al oído humano.</div>
+      <div class="paso"><b>Fusión variable a variable.</b> Cada variable se evalúa y pondera por separado antes de combinarse — en vez de un único índice opaco, el veredicto se construye pieza a pieza, lo que lo hace más robusto ante grabaciones ruidosas.</div>
+      <div class="paso"><b>Capa ML ligera.</b> Un modelo compacto interpreta el conjunto y produce el veredicto final con su nivel de intensidad — lo bastante pequeño para ejecutarse al instante en el teléfono.</div>
+      <div class="paso"><b>Línea de tiempo sincronizada.</b> Los resultados se mapean sobre la reproducción, de modo que las alertas evolucionan con el discurso en vez de resumirse en un número final.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Procesamiento</span><b>100% en el dispositivo</b></div>
+      <div class="dato"><span>Entrada</span><b>Audio y vídeo</b></div>
+      <div class="dato"><span>Motor</span><b>Fusión por variables + ML ligero</b></div>
+      <div class="dato"><span>Tamaño</span><b>~9 MB</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>En pantalla</h2>
+    <div class="capturas">
+      <img src="img/neurovocal-1.png" alt="NeuroVocal — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/neurovocal-2.png" alt="NeuroVocal — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/neurovocal-3.png" alt="NeuroVocal — captura 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/es/app/neurovocal-studio/id6748546482">Descargar en el App Store</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al portfolio</a> · Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+
+<script>
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
