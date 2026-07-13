@@ -209,3 +209,10 @@ footer a:hover { color: var(--verde); }
   .paso { padding: 13px 14px 13px 56px; font-size: .9rem; }
   .orbe { filter: blur(60px); opacity: .12; } /* menos carga de GPU en móviles */
 }
+
+/* ── Selector de idioma doble ── */
+.idiomas { display: inline-flex; gap: 2px; border: 1px solid var(--border); border-radius: 999px; padding: 2px; margin-left: 6px; align-self: center; }
+.idiomas b, .idiomas a { padding: 3px 10px; border-radius: 999px; font-size: .78rem; text-decoration: none; line-height: 1.4; }
+.idiomas b { background: var(--verde); color: #05130a; font-weight: 800; }
+.idiomas a { color: var(--muted); font-weight: 700; }
+.idiomas a:hover { color: var(--text); }
