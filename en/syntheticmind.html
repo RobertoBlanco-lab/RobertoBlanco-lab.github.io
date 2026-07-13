@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SyntheticMind — Private on-device AI · Roberto Blanco</title>
+<meta name="description" content="How SyntheticMind is built: a Rust cognitive engine, on-device Qwen, grounding in official Spanish law and open data, and the same engine compiled to WebAssembly.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="es" href="../syntheticmind.html">
+<link rel="alternate" hreflang="en" href="syntheticmind.html">
+<link rel="stylesheet" href="../estilo.css?v=2">
+<style>body { --acc: var(--verde); }</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>Private on-device AI</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Voice analyzer</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Voice coach</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Psychedelic chill game</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Neon merge puzzle</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Services</a>
+      <a href="index.html#contacto">Contact</a>
+      <a href="../syntheticmind.html" id="lang-es" style="color:var(--verde);font-weight:700">ES</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--verde);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg" alt="SyntheticMind">
+    <h1>SyntheticMind</h1>
+    <div class="tag">Your AI. 100% private.</div>
+    <div class="meta">Productivity · $9.99 · iPhone (iOS 16+) · 3.8 GB</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/syntheticmind/id6774833296">Get it on the App Store</a>
+      <a class="btn btn-ghost" href="https://robertoblanco-lab.github.io/syntheticmind-web/">Try it in your browser</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>An AI that's yours alone</h2>
+    <p class="intro">Think about it: everything you tell a regular AI assistant travels to someone else's server.
+       Your doubts, your contracts, your worries. <b>SyntheticMind was born from refusing that</b>:
+       a full AI that lives inside your iPhone and answers even with no internet.
+       Turn on airplane mode and ask it something — <b>that's the proof</b>.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>A legal question?</b>Ask about Spanish employment law, inheritance or any article: it answers with the actual text of the official gazette (BOE) and shows you where it comes from.</div>
+      <div class="rasgo"><b>No accounts, no passwords</b>Open it and it works. Nobody even knows you use it.</div>
+      <div class="rasgo"><b>It shows its cards</b>Every answer carries a seal with the sources used and their confidence. And when it doesn't know, it says so.</div>
+      <div class="rasgo"><b>Remembers what matters</b>Its memory lives on your phone, not in a cloud. Erase it whenever you want.</div>
+      <div class="rasgo"><b>Snap a photo and ask</b>A note, an invoice, a contract: it reads and understands them without leaving the device.</div>
+      <div class="rasgo"><b>Talk to it</b>Dictate your question and listen to the answer.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <details class="tecnica">
+    <summary><span class="t"><b style="display:block">🔧 For the curious: how it works inside</b><small style="display:block;margin-top:3px">Architecture, engine and technical decisions — only if you feel like diving in</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">Two platforms, one engine: the Rust cognitive core compiles natively for iOS
+       and to WebAssembly for the browser, with the same verification guarantees on both.</p>
+    <div class="pipeline">
+      <div class="paso"><b>Rust cognitive core.</b> Multi-layer orchestrator with reasoning, memory, understanding, planning and safety modules. Bridged to Swift via <span class="mono">UniFFI</span>.</div>
+      <div class="paso"><b>On-device inference.</b> A fine-tuned Qwen model running on <span class="mono">llama.cpp</span> with Metal acceleration on iPhone; Qwen 2.5 via <span class="mono">WebLLM + WebGPU</span> in the browser.</div>
+      <div class="paso"><b>Local knowledge base.</b> SQLite in WAL mode with encryption at rest: 5,300 articles of Spanish law parsed article by article plus 9,000 regional open-data records, ingested with idempotent pipelines.</div>
+      <div class="paso"><b>Anti-hallucination grounding.</b> Explicit-citation detection ("article 348 bis" → official text), term-overlap retrieval with thresholds, and a grounding-strength report that decides between a grounded or a cautious answer.</div>
+      <div class="paso"><b>Output verification.</b> A verifier checks the answer's citations against the real corpus and flags non-existent ones before anything is shown to the user.</div>
+      <div class="paso"><b>Zero-cost web version.</b> The same grounding engine compiled to WASM with <span class="mono">wasm-bindgen</span>, the corpus as static JSON, an installable PWA and GitHub Pages as the only "server".</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Languages</span><b>Rust + Swift (+ WASM)</b></div>
+      <div class="dato"><span>Model</span><b>Fine-tuned Qwen, on-device</b></div>
+      <div class="dato"><span>Corpus</span><b>14,000+ official documents</b></div>
+      <div class="dato"><span>Data collected</span><b>None</b></div>
+      <div class="dato"><span>Cloud cost</span><b>$0</b></div>
+      <div class="dato"><span>Web infrastructure</span><b>GitHub Pages (static)</b></div>
+    </div>
+    </div>
+    </details>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>On screen</h2>
+    <div class="capturas">
+      <img src="../img/syntheticmind-1.png" alt="SyntheticMind — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/syntheticmind-2.png" alt="SyntheticMind — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/syntheticmind-3.png" alt="SyntheticMind — captura 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/syntheticmind/id6774833296">Get it on the App Store</a>
+      <a class="btn btn-ghost" href="https://robertoblanco-lab.github.io/syntheticmind-web/">Try it in your browser</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Back to portfolio</a> · Roberto Blanco — indie developer · Spain
+  </div>
+</footer>
+
+<script>
+  document.getElementById("lang-es").addEventListener("click", () => { try { localStorage.setItem("idioma", "es"); } catch (e) {} });
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

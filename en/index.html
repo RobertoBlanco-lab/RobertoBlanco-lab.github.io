@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roberto Blanco — Apps &amp; IA on-device</title>
-<meta name="description" content="Desarrollador indie español: IA privada on-device, apps iOS y soluciones con datos. Creador de SyntheticMind, NeuroVocal Studio, VoiceCoachAI, NeoBlob y NeonPulse.">
+<title>Roberto Blanco — Apps &amp; on-device AI</title>
+<meta name="description" content="Spanish indie developer: private on-device AI, iOS apps and open-data products. Creator of SyntheticMind, NeuroVocal Studio, VoiceCoachAI, NeoBlob and NeonPulse.">
 <meta name="theme-color" content="#070b09">
-<link rel="alternate" hreflang="en" href="en/index.html">
-<link rel="alternate" hreflang="es" href="index.html">
-<link rel="stylesheet" href="estilo.css?v=2">
+<link rel="alternate" hreflang="es" href="../index.html">
+<link rel="alternate" hreflang="en" href="index.html">
+<link rel="stylesheet" href="../estilo.css?v=2">
 <style>
-  /* ── Solo portada ── */
   #red { position: absolute; inset: 0; z-index: 0; opacity: .5; }
   .hero { text-align: center; padding: 120px 0 80px; position: relative; overflow: hidden; }
   .hero .wrap { z-index: 2; }
@@ -28,7 +27,6 @@
   }
   .hero p.sub { margin: 24px auto 0; max-width: 640px; color: var(--muted); font-size: 1.18rem; }
   .hero .cta { justify-content: center; margin-top: 40px; }
-
   .stats {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
     gap: 1px; background: var(--border); border: 1px solid var(--border);
@@ -43,8 +41,6 @@
     .app-card { padding: 24px 18px; }
     .app-card p { min-height: 0; }
   }
-
-  /* Vitrina de apps */
   .vitrina { padding: 90px 0; }
   .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 20px; }
   .app-card {
@@ -76,8 +72,6 @@
   .app-card:hover .ver::after { margin-left: 5px; }
   .app-card.grande { grid-column: 1 / -1; }
   .app-card.grande p { min-height: 0; max-width: 720px; }
-
-  /* Servicios */
   .servicios { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 18px; }
   .servicio {
     background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.012));
@@ -89,7 +83,6 @@
   .servicio h3 { font-size: 1.08rem; margin-bottom: 8px; font-weight: 700; }
   .servicio p { color: var(--muted); font-size: .93rem; }
   section.plana { padding: 90px 0; border-top: 1px solid var(--border); }
-
   .contacto-caja {
     text-align: center; border-radius: 28px; padding: 70px 30px;
     background:
@@ -110,16 +103,16 @@
       <div class="desplegable" id="desp">
         <button type="button" id="desp-btn">Apps ▾</button>
         <div class="menu-apps">
-          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>IA privada on-device</small></span></a>
-          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Analizador de voz</small></span></a>
-          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Coach de voz</small></span></a>
-          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Juego chill psicodélico</small></span></a>
-          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Puzle de fusión neón</small></span></a>
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>Private on-device AI</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Voice analyzer</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Voice coach</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Psychedelic chill game</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Neon merge puzzle</small></span></a>
         </div>
       </div>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-      <a href="en/index.html" style="color:var(--verde);font-weight:700">EN</a>
+      <a href="#servicios">Services</a>
+      <a href="#contacto">Contact</a>
+      <a href="../index.html" id="lang-es" style="color:var(--verde);font-weight:700">ES</a>
     </nav>
   </div>
 </header>
@@ -129,19 +122,19 @@
   <div class="orbe" style="width:520px;height:520px;background:var(--verde);top:-160px;left:-140px"></div>
   <div class="orbe" style="width:420px;height:420px;background:var(--violeta);top:40px;right:-160px;animation-delay:-6s"></div>
   <div class="wrap">
-    <div class="chip rev"><i></i> Disponible para proyectos · España</div>
-    <h1 class="rev">Construyo apps e<br><span class="grad">IA que vive en tu dispositivo</span></h1>
-    <p class="sub rev">Desarrollador indie. Cinco apps publicadas en el App Store, un motor cognitivo
-       en Rust y una obsesión: que tus datos no salgan de tu bolsillo.</p>
+    <div class="chip rev"><i></i> Available for projects · Spain</div>
+    <h1 class="rev">I build apps and<br><span class="grad">AI that lives on your device</span></h1>
+    <p class="sub rev">Indie developer. Five apps shipped on the App Store, a cognitive engine
+       written in Rust, and one obsession: your data should never leave your pocket.</p>
     <div class="cta rev">
-      <a class="btn btn-primary" href="#apps">Ver mis apps</a>
-      <a class="btn btn-ghost" href="#contacto">Trabaja conmigo</a>
+      <a class="btn btn-primary" href="#apps">See my apps</a>
+      <a class="btn btn-ghost" href="#contacto">Work with me</a>
     </div>
     <div class="stats rev">
-      <div class="stat"><b data-n="5">0</b><span>apps en el App Store</span></div>
-      <div class="stat"><b style="color:var(--verde)">100%</b><span>IA on-device</span></div>
-      <div class="stat"><b>0 €</b><span>de nube: todo local</span></div>
-      <div class="stat"><b>Rust + Swift</b><span>del motor a la interfaz</span></div>
+      <div class="stat"><b data-n="5">0</b><span>apps on the App Store</span></div>
+      <div class="stat"><b style="color:var(--verde)">100%</b><span>on-device AI</span></div>
+      <div class="stat"><b>$0</b><span>cloud bill: everything local</span></div>
+      <div class="stat"><b>Rust + Swift</b><span>from engine to interface</span></div>
     </div>
   </div>
 </div>
@@ -149,56 +142,57 @@
 <section class="vitrina" id="apps">
   <div class="wrap">
     <div class="titulo-seccion rev">
-      <h2>Mis apps</h2>
-      <p>Cinco formas distintas de usar tu móvil sin regalar tus datos. Entra en cualquiera — y si te va la técnica, cada una esconde una sección "para curiosos" con sus tripas.</p>
+      <h2>My apps</h2>
+      <p>Five ways to use your phone without giving your data away. Open any of them — and if you're into tech, each one hides a "for the curious" section with its inner workings.</p>
     </div>
     <div class="apps-grid">
 
       <a class="app-card grande rev" href="syntheticmind.html" style="--acc:var(--verde)">
         <div class="fila">
           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg" alt="SyntheticMind">
-          <div><h3>SyntheticMind</h3><div class="tag">Tu IA. 100% privada. · Proyecto estrella</div></div>
+          <div><h3>SyntheticMind</h3><div class="tag">Your AI. 100% private. · Flagship project</div></div>
         </div>
-        <p>¿Le contarías tus cosas a una IA que se lo cuenta todo a un servidor? Esta no puede: vive entera
-           dentro de tu iPhone y funciona hasta en modo avión. Responde dudas legales con el texto real del BOE,
-           lee tus documentos y te enseña las fuentes de cada respuesta. Pruébala también en tu navegador.</p>
-        <div class="ver">Descubrir SyntheticMind</div>
+        <p>Would you tell your secrets to an AI that reports everything to a server? This one can't:
+           it lives entirely inside your iPhone and works even in airplane mode. It answers Spanish legal
+           questions with the actual text of the law, reads your documents, and shows the sources behind
+           every answer. You can also try it right in your browser.</p>
+        <div class="ver">Discover SyntheticMind</div>
       </a>
 
       <a class="app-card rev" href="neurovocal.html" style="--acc:var(--violeta)">
         <div class="fila">
           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeuroVocal Studio">
-          <div><h3>NeuroVocal Studio</h3><div class="tag">Analizador de voz · ★★★★★</div></div>
+          <div><h3>NeuroVocal Studio</h3><div class="tag">Voice analyzer · ★★★★★</div></div>
         </div>
-        <p>Tu voz dice más de lo que crees. Analiza cualquier audio o vídeo y te da un veredicto claro — sin que tu voz salga del móvil.</p>
-        <div class="ver">Descubrir NeuroVocal</div>
+        <p>Your voice says more than you think. It analyzes any audio or video and gives you a clear verdict — without your voice ever leaving your phone.</p>
+        <div class="ver">Discover NeuroVocal</div>
       </a>
 
       <a class="app-card rev" href="voicecoach.html" style="--acc:var(--naranja)">
         <div class="fila">
           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="VoiceCoachAI">
-          <div><h3>VoiceCoachAI</h3><div class="tag">Coach de voz intuitivo</div></div>
+          <div><h3>VoiceCoachAI</h3><div class="tag">Intuitive voice coach</div></div>
         </div>
-        <p>Escúchate antes de esa entrevista o conversación difícil: habla unos segundos y te dice cómo suenas, con tono de coach.</p>
-        <div class="ver">Descubrir VoiceCoachAI</div>
+        <p>Hear yourself before that interview or difficult conversation: speak for a few seconds and it tells you how you sound, like a coach would.</p>
+        <div class="ver">Discover VoiceCoachAI</div>
       </a>
 
       <a class="app-card rev" href="neoblob.html" style="--acc:var(--rosa)">
         <div class="fila">
           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeoBlob">
-          <div><h3>NeoBlob</h3><div class="tag">Juego chill psicodélico · Gratis</div></div>
+          <div><h3>NeoBlob</h3><div class="tag">Psychedelic chill game · Free</div></div>
         </div>
-        <p>Cinco minutos de calma: una bola de luz que responde a tu dedo, música chill y niveles que son pequeños viajes. No puedes perder.</p>
-        <div class="ver">Descubrir NeoBlob</div>
+        <p>Five minutes of calm: a ball of light that follows your finger, chill music and levels that feel like little journeys. You can't lose.</p>
+        <div class="ver">Discover NeoBlob</div>
       </a>
 
       <a class="app-card rev" href="neonpulse.html" style="--acc:var(--cian)">
         <div class="fila">
           <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeonPulse">
-          <div><h3>NeonPulse</h3><div class="tag">Arrastra. Fusiona. Evoluciona. · Gratis</div></div>
+          <div><h3>NeonPulse</h3><div class="tag">Drag. Merge. Evolve. · Free</div></div>
         </div>
-        <p>Parece fácil: fusiona piezas hasta dejar una. La trampa es que la primera solución casi nunca funciona — y eso engancha.</p>
-        <div class="ver">Descubrir NeonPulse</div>
+        <p>Looks easy: merge pieces until only one is left. The catch — the first solution you see almost never works. That's what hooks you.</p>
+        <div class="ver">Discover NeonPulse</div>
       </a>
 
     </div>
@@ -209,25 +203,25 @@
   <div class="orbe" style="width:460px;height:460px;background:var(--verde);top:120px;left:35%"></div>
   <div class="wrap">
     <div class="titulo-seccion rev">
-      <h2>Servicios</h2>
-      <p>Lo mismo que hago para mis productos, para tu proyecto.</p>
+      <h2>Services</h2>
+      <p>Everything I do for my own products, for your project.</p>
     </div>
     <div class="servicios">
       <div class="servicio rev"><span class="ic">🧠</span>
-        <h3>IA privada para tu negocio</h3>
-        <p>Asistentes que funcionan con tus datos sin que salgan de tu empresa: RAG sobre documentación propia, verificación de fuentes y ejecución local. Ideal para legal, salud y administración.</p>
+        <h3>Private AI for your business</h3>
+        <p>AI assistants that work on your data without it ever leaving your company: RAG over your own documents, source verification and local execution. Ideal for legal, healthcare and government.</p>
       </div>
       <div class="servicio rev"><span class="ic">📱</span>
-        <h3>Desarrollo de apps iOS</h3>
-        <p>De la idea al App Store: diseño, Swift, IA on-device, optimización y publicación. Cinco apps propias avalan el proceso completo.</p>
+        <h3>iOS app development</h3>
+        <p>From idea to the App Store: design, Swift, on-device AI, optimization and publishing. Five shipped apps of my own back the whole process.</p>
       </div>
       <div class="servicio rev"><span class="ic">⚡</span>
-        <h3>Web con IA sin servidores</h3>
-        <p>La IA corre en el navegador del usuario (WebGPU + WebAssembly): sin servidores que pagar ni datos que custodiar.</p>
+        <h3>AI websites with zero servers</h3>
+        <p>The AI runs in the user's browser (WebGPU + WebAssembly): no servers to pay for, no data to safeguard.</p>
       </div>
       <div class="servicio rev"><span class="ic">📊</span>
-        <h3>Datos abiertos y automatización</h3>
-        <p>Ingesta de datos públicos (BOE, portales de datos abiertos, APIs oficiales) convertidos en buscadores, asistentes e informes automáticos.</p>
+        <h3>Open data &amp; automation</h3>
+        <p>Ingesting public data (official gazettes, open-data portals, public APIs) and turning it into useful products: search tools, assistants, automated reports.</p>
       </div>
     </div>
   </div>
@@ -236,52 +230,36 @@
 <section class="plana" id="contacto" style="padding-top:20px; border-top:none">
   <div class="wrap">
     <div class="contacto-caja rev">
-      <h2>¿Hablamos?</h2>
-      <p>Cuéntame tu idea y te digo cómo la haría — sin compromiso.</p>
-      <a class="btn btn-primary" href="mailto:roberto34t10@gmail.com">Escríbeme</a>
+      <h2>Let's talk</h2>
+      <p>Tell me your idea and I'll tell you how I'd build it — no strings attached.</p>
+      <a class="btn btn-primary" href="mailto:roberto34t10@gmail.com">Email me</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    Roberto Blanco — desarrollador indie · España<br>
-    <a href="https://apps.apple.com/es/developer/roberto-blanco-gomez/id1824789786">Todas mis apps en el App Store</a>
-    · <a href="https://robertoblanco-lab.github.io/syntheticmind-web/">SyntheticMind Web</a><br>
-    <img src="https://robertoblancogomez.goatcounter.com/counter//.svg" alt="visitas" style="margin-top:12px; height:22px; opacity:.65" onerror="this.style.display='none'">
+    Roberto Blanco — indie developer · Spain<br>
+    <a href="https://apps.apple.com/developer/id1824789786">All my apps on the App Store</a>
+    · <a href="https://robertoblanco-lab.github.io/syntheticmind-web/">SyntheticMind Web</a>
   </div>
 </footer>
 
 <script>
-  // Idioma: primera visita con navegador no-español → versión inglesa
-  try {
-    if (!localStorage.getItem("idioma") && !(navigator.language || "es").toLowerCase().startsWith("es")) {
-      localStorage.setItem("idioma", "en");
-      location.replace("en/index.html");
-    }
-  } catch (e) {}
-  document.querySelector('a[href="en/index.html"]').addEventListener("click", () => {
-    try { localStorage.setItem("idioma", "en"); } catch (e) {}
+  document.getElementById("lang-es").addEventListener("click", () => {
+    try { localStorage.setItem("idioma", "es"); } catch (e) {}
   });
-
-  // Menú desplegable
   const desp = document.getElementById("desp");
   document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
   document.addEventListener("click", () => desp.classList.remove("abierto"));
-
-  // Aparición al hacer scroll
   const io = new IntersectionObserver(es => {
     es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll(".rev").forEach(el => io.observe(el));
-
-  // Contador animado
   document.querySelectorAll(".stat b[data-n]").forEach(el => {
     const fin = +el.dataset.n; let v = 0;
     const t = setInterval(() => { el.textContent = ++v; if (v >= fin) clearInterval(t); }, 220);
   });
-
-  // Red neuronal animada del hero (ligera, respeta reduced-motion)
   if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const cv = document.getElementById("red"), cx = cv.getContext("2d");
     let W, H, nodos = [];
@@ -317,8 +295,6 @@
     })();
   }
 </script>
-
-<!-- Contador de visitas: GoatCounter (sin cookies, sin rastreo personal) -->
 <script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>

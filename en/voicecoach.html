@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoiceCoachAI — Intuitive voice coach · Roberto Blanco</title>
+<meta name="description" content="How VoiceCoachAI works: real-time voice analysis, contextual interpretation and coach-style feedback — all on-device.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="es" href="../voicecoach.html">
+<link rel="alternate" hreflang="en" href="voicecoach.html">
+<link rel="stylesheet" href="../estilo.css?v=2">
+<style>body { --acc: var(--naranja); } .btn-primary { color: #1a1104; }</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>Private on-device AI</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Voice analyzer</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Voice coach</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Psychedelic chill game</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Neon merge puzzle</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Services</a>
+      <a href="index.html#contacto">Contact</a>
+      <a href="../voicecoach.html" id="lang-es" style="color:var(--verde);font-weight:700">ES</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--naranja);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="VoiceCoachAI">
+    <h1>VoiceCoachAI</h1>
+    <div class="tag">Intuitive voice coach</div>
+    <div class="meta">Lifestyle · $5.99 · iPhone &amp; iPad · English &amp; Spanish</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/voicecoachai/id6761835018">Get it on the App Store</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Hear yourself before they do</h2>
+    <p class="intro">An interview, a tough meeting, that conversation you've been putting off for days.
+       Speak for a few seconds and <b>VoiceCoachAI tells you how you sound</b> — tension, doubt, clarity or calm —
+       in the tone of a coach who helps, not a machine that judges.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Instant</b>Speak for a few seconds and the feedback is there. Nothing to set up.</div>
+      <div class="rasgo"><b>What's underneath</b>Detects signals of tension, doubt, clarity or calm in the way you speak.</div>
+      <div class="rasgo"><b>Like a coach</b>Short, natural phrases that help you understand yourself and move forward — never labels.</div>
+      <div class="rasgo"><b>Better the more you use it</b>It learns your patterns over time and tunes its readings to how you speak.</div>
+    </div>
+    <p style="color:var(--muted); font-size:.85rem; margin-top:14px">Not a medical or diagnostic tool; the information is for guidance only.</p>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <details class="tecnica">
+    <summary><span class="t"><b style="display:block">🔧 For the curious: how it works inside</b><small style="display:block;margin-top:3px">The analysis pipeline, explained — only if you feel like diving in</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">All processing happens <b>on the device</b>: no third-party AI services,
+       no audio, text or data sent out, nothing stored on external servers.</p>
+    <div class="pipeline">
+      <div class="paso"><b>Capture and feature extraction.</b> Multiple dimensions of the voice are processed in real time: variability, rhythm, coherence and pitch behavior.</div>
+      <div class="paso"><b>Contextual interpretation.</b> Acoustic signals are combined with an interpretation engine that tells main from secondary topics to place the reading in context.</div>
+      <div class="paso"><b>Feedback generation.</b> The detected state is translated into short, natural coach phrases across areas like work, purpose and relationships.</div>
+      <div class="paso"><b>Adaptive system.</b> With use, the app spots recurring patterns over time and adjusts its readings to your way of speaking.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Processing</span><b>100% on-device</b></div>
+      <div class="dato"><span>Third-party AI</span><b>None</b></div>
+      <div class="dato"><span>Analysis</span><b>Real time</b></div>
+      <div class="dato"><span>Size</span><b>~12 MB</b></div>
+    </div>
+    </div>
+    </details>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>On screen</h2>
+    <div class="capturas">
+      <img src="../img/voicecoach-1.png" alt="VoiceCoachAI — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/voicecoach-2.png" alt="VoiceCoachAI — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/voicecoach-3.png" alt="VoiceCoachAI — captura 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/app/voicecoachai/id6761835018">Get it on the App Store</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Back to portfolio</a> · Roberto Blanco — indie developer · Spain
+  </div>
+</footer>
+
+<script>
+  document.getElementById("lang-es").addEventListener("click", () => { try { localStorage.setItem("idioma", "es"); } catch (e) {} });
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

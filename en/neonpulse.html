@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeonPulse — Neon merge puzzle · Roberto Blanco</title>
+<meta name="description" content="The logic of NeonPulse: a board of symbols with reaction rules, merges that evolve pieces, and levels solved by reducing everything to a single piece.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="es" href="../neonpulse.html">
+<link rel="alternate" hreflang="en" href="neonpulse.html">
+<link rel="stylesheet" href="../estilo.css?v=2">
+<style>body { --acc: var(--cian); } .btn-primary { color: #04211c; }</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>Private on-device AI</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Voice analyzer</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Voice coach</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Psychedelic chill game</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Neon merge puzzle</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Services</a>
+      <a href="index.html#contacto">Contact</a>
+      <a href="../neonpulse.html" id="lang-es" style="color:var(--verde);font-weight:700">ES</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--cian);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeonPulse">
+    <h1>NeonPulse</h1>
+    <div class="tag">Drag. Merge. Evolve.</div>
+    <div class="meta">Puzzle · Free · iPhone &amp; iPad</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/neonpulse/id6768053282">Download free</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Looks easy. It isn't.</h2>
+    <p class="intro">Drag pieces, merge them, and leave the board with just one. That's all — and that's the trap:
+       <b>the first solution you see almost never works</b>, and figuring out why is what hooks you.
+       All wrapped in neon, fluid animations and a hypnotic atmosphere.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Merges with personality</b>Each symbol has its own properties and reacts differently depending on what you combine it with.</div>
+      <div class="rasgo"><b>Every move matters</b>One small change can completely transform the outcome of the puzzle.</div>
+      <div class="rasgo"><b>Smart progression</b>New mechanics and unexpected combinations as you advance.</div>
+      <div class="rasgo"><b>Premium look</b>Neon, fluid animations and a hypnotic atmosphere — relaxing yet demanding.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <details class="tecnica">
+    <summary><span class="t"><b style="display:block">🔧 For the curious: the puzzle logic</b><small style="display:block;margin-top:3px">The rule system inside — only if you feel like diving in</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">Beneath the visuals is a pure rule system — a small state engine where
+       every level is a reduction problem.</p>
+    <div class="pipeline">
+      <div class="paso"><b>The board as state.</b> Each level is a configuration of cells and symbols. Every drag produces a state transition: the game is, at its core, navigating a state space toward the one with a single piece.</div>
+      <div class="paso"><b>Reaction rules.</b> When two symbols meet, their rule is looked up: merge and evolve the shape, transform the whole board, or open the door to undoing a step and exploring another solution branch.</div>
+      <div class="paso"><b>Symbol evolution.</b> Pieces don't add up: they evolve. The right chain of merges unlocks advanced transformations that can change the global state and force you to rethink your strategy.</div>
+      <div class="paso"><b>Level design.</b> Every level is built so that attractive false solutions exist: the easy way almost works, and discovering why it doesn't is the fun of the puzzle.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Genre</span><b>Logic puzzle</b></div>
+      <div class="dato"><span>Core mechanic</span><b>Merge + symbol evolution</b></div>
+      <div class="dato"><span>Win condition</span><b>Reduce to a single piece</b></div>
+      <div class="dato"><span>Price</span><b>Free</b></div>
+    </div>
+    </div>
+    </details>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>On screen</h2>
+    <div class="capturas">
+      <img src="../img/neonpulse-1.png" alt="NeonPulse — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/neonpulse-2.png" alt="NeonPulse — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/neonpulse-3.png" alt="NeonPulse — captura 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/app/neonpulse/id6768053282">Download free</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Back to portfolio</a> · Roberto Blanco — indie developer · Spain
+  </div>
+</footer>
+
+<script>
+  document.getElementById("lang-es").addEventListener("click", () => { try { localStorage.setItem("idioma", "es"); } catch (e) {} });
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>

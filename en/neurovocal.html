@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuroVocal Studio — Voice analyzer · Roberto Blanco</title>
+<meta name="description" content="How NeuroVocal Studio works: acoustic feature extraction, variable-by-variable fusion and a light ML layer — all on-device.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="es" href="../neurovocal.html">
+<link rel="alternate" hreflang="en" href="neurovocal.html">
+<link rel="stylesheet" href="../estilo.css?v=2">
+<style>body { --acc: var(--violeta); }</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>Private on-device AI</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Voice analyzer</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Voice coach</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Psychedelic chill game</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Neon merge puzzle</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Services</a>
+      <a href="index.html#contacto">Contact</a>
+      <a href="../neurovocal.html" id="lang-es" style="color:var(--verde);font-weight:700">ES</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--violeta);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg" alt="NeuroVocal Studio">
+    <h1>NeuroVocal Studio</h1>
+    <div class="tag">Voice analyzer</div>
+    <div class="meta">Education · $14.99 · iPhone &amp; iPad · ★★★★★ · English &amp; Spanish</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/app/neurovocal-studio/id6748546482">Get it on the App Store</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Your voice says more than you think</h2>
+    <p class="intro">Every sentence you speak carries dozens of signals the ear can't catch: micro-shifts in rhythm,
+       tension, hesitation. <b>NeuroVocal Studio listens for them</b> and turns any recording into a clear
+       verdict — no weird spectrograms, and your voice never leaves your phone.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Record or import</b>Audio or video, it doesn't matter: the analysis comes back instantly.</div>
+      <div class="rasgo"><b>A verdict, not charts</b>No raw data dumps: it tells you what it found, in plain language.</div>
+      <div class="rasgo"><b>Watch it live</b>Alerts evolve along the timeline as you play back — you see the hot moments of the speech.</div>
+      <div class="rasgo"><b>Your voice stays with you</b>All analysis happens on your device. Nothing travels to any server.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <details class="tecnica">
+    <summary><span class="t"><b style="display:block">🔧 For the curious: how it works inside</b><small style="display:block;margin-top:3px">The analysis engine, explained — only if you feel like diving in</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">At its heart is an analysis engine with <b>variable-by-variable fusion and a lightweight
+       machine-learning layer</b> — designed to run entirely on the device, never sending audio to a server.</p>
+    <div class="pipeline">
+      <div class="paso"><b>Acoustic feature extraction.</b> Multiple dimensions are pulled from the signal: pitch and its behavior, energy, rhythm, pauses, and micro-variations beyond human hearing.</div>
+      <div class="paso"><b>Variable-by-variable fusion.</b> Each variable is scored and weighted separately before combining — instead of one opaque index, the verdict is built piece by piece, making it more robust to noisy recordings.</div>
+      <div class="paso"><b>Light ML layer.</b> A compact model interprets the whole and produces the final verdict with its intensity level — small enough to run instantly on a phone.</div>
+      <div class="paso"><b>Synchronized timeline.</b> Results are mapped onto playback, so alerts evolve with the speech instead of collapsing into a single final number.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Processing</span><b>100% on-device</b></div>
+      <div class="dato"><span>Input</span><b>Audio &amp; video</b></div>
+      <div class="dato"><span>Engine</span><b>Per-variable fusion + light ML</b></div>
+      <div class="dato"><span>Size</span><b>~9 MB</b></div>
+    </div>
+    </div>
+    </details>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>On screen</h2>
+    <div class="capturas">
+      <img src="../img/neurovocal-1.png" alt="NeuroVocal — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/neurovocal-2.png" alt="NeuroVocal — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/neurovocal-3.png" alt="NeuroVocal — captura 3" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/app/neurovocal-studio/id6748546482">Get it on the App Store</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Back to portfolio</a> · Roberto Blanco — indie developer · Spain
+  </div>
+</footer>
+
+<script>
+  document.getElementById("lang-es").addEventListener("click", () => { try { localStorage.setItem("idioma", "es"); } catch (e) {} });
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
