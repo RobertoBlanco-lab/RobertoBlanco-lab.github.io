@@ -135,8 +135,9 @@ details.tecnica summary {
   justify-content: space-between; gap: 14px; padding: 22px 26px;
 }
 details.tecnica summary::-webkit-details-marker { display: none; }
-details.tecnica summary .t { font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; }
-details.tecnica summary .t small { display: block; color: var(--muted); font-weight: 400; font-size: .85rem; margin-top: 2px; }
+details.tecnica summary .t { font-size: 1.05rem; letter-spacing: -.01em; }
+details.tecnica summary .t b { display: block; font-weight: 800; }
+details.tecnica summary .t small { display: block; color: var(--muted); font-weight: 400; font-size: .85rem; margin-top: 3px; }
 details.tecnica summary i {
   font-style: normal; color: var(--acc); font-size: 1.2rem; flex: none;
   transition: transform .25s;
