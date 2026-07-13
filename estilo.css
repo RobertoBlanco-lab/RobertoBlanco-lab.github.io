@@ -25,6 +25,10 @@ img { max-width: 100%; }
 @keyframes flotar { from { transform: translateY(-25px) } to { transform: translateY(25px) } }
 @media (prefers-reduced-motion: reduce) { .orbe { animation: none } }
 
+/* Safari iOS ignora overflow-x del body con absolutos que sobresalen:
+   cada contenedor de orbes recorta lo suyo. */
+section, .hero, .hero-app, footer { overflow: hidden; }
+
 /* ── Navegación ── */
 header {
   position: sticky; top: 0; z-index: 50;
