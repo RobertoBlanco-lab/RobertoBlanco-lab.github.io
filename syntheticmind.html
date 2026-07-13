@@ -47,24 +47,28 @@
 
 <section class="bloque">
   <div class="wrap rev">
-    <h2>Qué hace</h2>
-    <p class="intro">Un asistente de IA que razona, recuerda y responde <b>íntegramente dentro de tu iPhone</b>.
-       Sin servidores procesando lo que escribes, sin cuentas, sin rastreo. Funciona en modo avión — esa es la prueba.</p>
+    <h2>Una IA que es solo tuya</h2>
+    <p class="intro">Piénsalo un segundo: todo lo que le cuentas a un asistente de IA normal viaja a un servidor
+       de otra empresa. Tus dudas, tus contratos, tus preocupaciones. <b>SyntheticMind nace de negarse a eso</b>:
+       una IA completa que vive dentro de tu iPhone y responde aunque no haya internet.
+       Actívale el modo avión y pregúntale — <b>esa es la prueba</b>.</p>
     <div class="rasgos">
-      <div class="rasgo"><b>El BOE en tu bolsillo</b>Derecho español con el texto real del BOE, artículo a artículo. Pregunta por el 348 bis de la LSC y te da el texto oficial.</div>
-      <div class="rasgo"><b>Datos abiertos oficiales</b>Portales de Castilla y León, Asturias y Madrid, ingeridos y consultables sin conexión.</div>
-      <div class="rasgo"><b>Sello de verificación</b>Cada respuesta muestra sus fuentes, fragmentos y confianza. Transparencia, no caja negra.</div>
-      <div class="rasgo"><b>Memoria local</b>Contexto entre conversaciones en una memoria que vive solo en tu móvil, borrable cuando quieras.</div>
-      <div class="rasgo"><b>Visión y voz</b>Fotografía una nota o importa un PDF: los entiende en el dispositivo. Dicta y escucha en español.</div>
-      <div class="rasgo"><b>Modo avión</b>Toda la inteligencia es local: modelo, corpus, memoria y razonamiento.</div>
+      <div class="rasgo"><b>¿Una duda legal?</b>Pregúntale por un despido, una herencia o el artículo que sea: responde con el texto real del BOE y te enseña de dónde lo saca.</div>
+      <div class="rasgo"><b>Sin cuentas ni contraseñas</b>La abres y funciona. Nadie sabe siquiera que la usas.</div>
+      <div class="rasgo"><b>Te enseña sus cartas</b>Cada respuesta lleva un sello con las fuentes consultadas y su confianza. Y si no sabe algo, te lo dice.</div>
+      <div class="rasgo"><b>Recuerda lo que importa</b>Su memoria vive en tu móvil, no en una nube. La borras cuando quieras.</div>
+      <div class="rasgo"><b>Hazle una foto y pregunta</b>Una nota, una factura, un contrato: los lee y entiende sin salir del dispositivo.</div>
+      <div class="rasgo"><b>Habla con ella</b>Dicta tu pregunta y escucha la respuesta, en español de verdad.</div>
     </div>
   </div>
 </section>
 
 <section class="bloque">
   <div class="wrap rev">
-    <h2>Cómo está construida</h2>
-    <p class="intro">Dos plataformas, un solo motor: el núcleo cognitivo en Rust se compila nativo para iOS
+    <details class="tecnica">
+    <summary><span class="t">🔧 Para curiosos: cómo funciona por dentro<small>Arquitectura, motor y decisiones técnicas — solo si te apetece profundizar</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">Dos plataformas, un solo motor: el núcleo cognitivo en Rust se compila nativo para iOS
        y a WebAssembly para el navegador, con las mismas garantías de verificación en ambos.</p>
     <div class="pipeline">
       <div class="paso"><b>Núcleo cognitivo en Rust.</b> Orquestador multicapa con módulos de razonamiento, memoria, comprensión, planificación y seguridad. Puente a Swift vía <span class="mono">UniFFI</span>.</div>
@@ -82,6 +86,8 @@
       <div class="dato"><span>Coste de nube</span><b>0 €</b></div>
       <div class="dato"><span>Infraestructura web</span><b>GitHub Pages (estático)</b></div>
     </div>
+    </div>
+    </details>
   </div>
 </section>
 

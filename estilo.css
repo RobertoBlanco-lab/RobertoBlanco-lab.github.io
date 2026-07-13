@@ -124,6 +124,28 @@ section { position: relative; }
 }
 .paso b { color: var(--text); }
 
+/* Sección técnica plegable — "para curiosos" */
+details.tecnica {
+  border: 1px solid var(--border); border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.01));
+  overflow: hidden;
+}
+details.tecnica summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center;
+  justify-content: space-between; gap: 14px; padding: 22px 26px;
+}
+details.tecnica summary::-webkit-details-marker { display: none; }
+details.tecnica summary .t { font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; }
+details.tecnica summary .t small { display: block; color: var(--muted); font-weight: 400; font-size: .85rem; margin-top: 2px; }
+details.tecnica summary i {
+  font-style: normal; color: var(--acc); font-size: 1.2rem; flex: none;
+  transition: transform .25s;
+}
+details.tecnica[open] summary i { transform: rotate(180deg); }
+details.tecnica summary:hover { background: rgba(255,255,255,.03); }
+.tecnica-cuerpo { padding: 2px 26px 26px; }
+@media (max-width: 520px) { details.tecnica summary { padding: 18px 16px } .tecnica-cuerpo { padding: 2px 16px 18px } }
+
 /* Ficha técnica (tabla de datos) */
 .ficha { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 10px; margin-top: 22px; }
 .dato { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; }

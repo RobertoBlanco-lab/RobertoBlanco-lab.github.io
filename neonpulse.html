@@ -46,10 +46,10 @@
 
 <section class="bloque">
   <div class="wrap rev">
-    <h2>Qué es</h2>
-    <p class="intro">Un juego de <b>puzles visuales y estratégicos</b> en un universo de energía neón y alquimia
-       futurista. El objetivo es simple de entender y desafiante de dominar: arrastra piezas por el tablero,
-       fusiona símbolos y evoluciona sus formas <b>hasta dejar una única pieza final</b>.</p>
+    <h2>Parece fácil. No lo es.</h2>
+    <p class="intro">Arrastra piezas, fusiónalas y deja el tablero en una sola. Eso es todo — y ahí está la trampa:
+       <b>la primera solución que ves casi nunca funciona</b>, y descubrir por qué es lo que engancha.
+       Todo envuelto en neón, animaciones fluidas y una atmósfera que hipnotiza.</p>
     <div class="rasgos">
       <div class="rasgo"><b>Fusión con personalidad</b>Cada símbolo tiene propiedades propias y reacciona distinto según con qué lo combines.</div>
       <div class="rasgo"><b>Cada movimiento importa</b>Un pequeño cambio puede transformar por completo el resultado del puzle.</div>
@@ -61,8 +61,10 @@
 
 <section class="bloque">
   <div class="wrap rev">
-    <h2>La lógica del puzle</h2>
-    <p class="intro">Bajo la estética hay un sistema de reglas puro — un pequeño motor de estados donde
+    <details class="tecnica">
+    <summary><span class="t">🔧 Para curiosos: la lógica del puzle<small>El sistema de reglas por dentro — solo si te apetece profundizar</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">Bajo la estética hay un sistema de reglas puro — un pequeño motor de estados donde
        cada nivel es un problema de reducción.</p>
     <div class="pipeline">
       <div class="paso"><b>El tablero como estado.</b> Cada nivel es una configuración de celdas y símbolos. Cada arrastre produce una transición de estado: el juego es, en el fondo, navegar un espacio de estados hasta el que tiene una sola pieza.</div>
@@ -76,6 +78,8 @@
       <div class="dato"><span>Condición de victoria</span><b>Reducir a una única pieza</b></div>
       <div class="dato"><span>Precio</span><b>Gratis</b></div>
     </div>
+    </div>
+    </details>
   </div>
 </section>
 
