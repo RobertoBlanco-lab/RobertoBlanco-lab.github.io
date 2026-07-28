@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salón Recreativo — Support · Roberto Blanco</title>
+<meta name="description" content="Salón Recreativo help: controls, high-score table, sound, and direct contact with the developer.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="en" href="salonrecreativo-soporte.html">
+<link rel="alternate" hreflang="es" href="../salonrecreativo-soporte.html">
+<link rel="stylesheet" href="../estilo.css?v=3">
+<style>
+  body { --acc: #5cff70; }
+  .btn-primary { color: #04210a; }
+  .faq { display:grid; gap:14px; margin-top:22px }
+  .faq details {
+    border:1px solid rgba(92,255,112,.22); border-radius:10px;
+    padding:16px 18px; background:rgba(92,255,112,.03);
+  }
+  .faq summary { cursor:pointer; font-weight:700; color:var(--acc); list-style:none }
+  .faq summary::-webkit-details-marker { display:none }
+  .faq summary::after { content:" ▾"; opacity:.6 }
+  .faq details[open] summary::after { content:" ▴" }
+  .faq p { margin:12px 0 0; opacity:.85; line-height:1.7 }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <a href="salonrecreativo.html">Salón Recreativo</a>
+      <a href="index.html#contacto">Contact</a>
+      <span class="idiomas"><a href="../salonrecreativo-soporte.html">ES</a><b>EN</b></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:440px;height:440px;background:#5cff70;top:-140px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <h1>Support</h1>
+    <div class="tag">Salón Recreativo</div>
+    <div class="meta">Seventeen machines · No ads, no purchases, no internet</div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Frequently asked questions</h2>
+    <div class="faq">
+
+      <details open>
+        <summary>How do I play on a phone?</summary>
+        <p>Each machine shows its own controls on screen, below the tube. The directions are laid
+           out as a cross — up, down, left and right — and the round button on the right is the
+           action: fire, jump or throw, depending on the game. On a Mac you play with the arrow
+           keys and the space bar.</p>
+      </details>
+
+      <details>
+        <summary>I made the high-score table. How do I enter my name?</summary>
+        <p>Three letter wheels appear. The up and down arrows change the letter, and tapping a
+           wheel selects it. Then hit GRABAR (save).</p>
+      </details>
+
+      <details>
+        <summary>Who is AMO?</summary>
+        <p>Nobody. It's the mark the machine ships with from the factory, the way the real ones
+           did. He's on all seventeen, and he's there to be beaten.</p>
+      </details>
+
+      <details>
+        <summary>I lost my high scores.</summary>
+        <p>Scores are stored on the device only. If you uninstall the app or change phone, they're
+           gone. There's no cloud backup because the app never connects to the internet.</p>
+      </details>
+
+      <details>
+        <summary>Why aren't the games called by their original names?</summary>
+        <p>Because those names are registered trademarks of their manufacturers. The mechanics are
+           free to use; the names are not. The ones here are original.</p>
+      </details>
+
+      <details>
+        <summary>There's no sound.</summary>
+        <p>Check the SONIDO option in the main menu, and make sure the phone isn't on silent. All
+           the music is generated on the fly — there are no audio files that could be missing.</p>
+      </details>
+
+      <details>
+        <summary>Does the app collect my data?</summary>
+        <p>No. None at all. The details are in the
+           <a href="salonrecreativo-privacidad.html">privacy policy</a>.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>A bug or an idea</h2>
+    <p class="intro">If something doesn't work, tell me which machine it was and what you were
+       doing. That's usually enough to find it. I answer personally — no forms, no tickets.</p>
+    <a class="btn btn-primary" href="mailto:roberto34t10@gmail.com?subject=Sal%C3%B3n%20Recreativo">roberto34t10@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="salonrecreativo.html">← Salón Recreativo</a> ·
+    <a href="salonrecreativo-privacidad.html">Privacy</a> ·
+    Roberto Blanco — indie developer · Spain
+  </div>
+</footer>
+<script>
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
