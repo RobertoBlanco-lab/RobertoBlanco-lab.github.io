@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salón Recreativo — Soporte · Roberto Blanco</title>
+<meta name="description" content="Ayuda de Salón Recreativo: mandos, tabla de récords, sonido y contacto directo con el desarrollador.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="en" href="en/salonrecreativo-soporte.html">
+<link rel="alternate" hreflang="es" href="salonrecreativo-soporte.html">
+<link rel="stylesheet" href="estilo.css?v=3">
+<style>
+  body { --acc: #5cff70; }
+  .btn-primary { color: #04210a; }
+  .faq { display:grid; gap:14px; margin-top:22px }
+  .faq details {
+    border:1px solid rgba(92,255,112,.22); border-radius:10px;
+    padding:16px 18px; background:rgba(92,255,112,.03);
+  }
+  .faq summary { cursor:pointer; font-weight:700; color:var(--acc); list-style:none }
+  .faq summary::-webkit-details-marker { display:none }
+  .faq summary::after { content:" ▾"; opacity:.6 }
+  .faq details[open] summary::after { content:" ▴" }
+  .faq p { margin:12px 0 0; opacity:.85; line-height:1.7 }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <a href="salonrecreativo.html">Salón Recreativo</a>
+      <a href="index.html#contacto">Contacto</a>
+      <span class="idiomas"><b>ES</b><a href="en/salonrecreativo-soporte.html">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:440px;height:440px;background:#5cff70;top:-140px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <h1>Soporte</h1>
+    <div class="tag">Salón Recreativo</div>
+    <div class="meta">Diecisiete máquinas · Sin anuncios, sin compras, sin conexión</div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq">
+
+      <details open>
+        <summary>¿Cómo se juega en el móvil?</summary>
+        <p>Cada máquina enseña sus propios mandos en pantalla, debajo del tubo. Las direcciones
+           van en cruz —arriba, abajo, izquierda y derecha— y el botón redondo de la derecha es
+           la acción: disparar, saltar o lanzar, según el juego. En Mac se juega con las flechas
+           del teclado y la barra espaciadora.</p>
+      </details>
+
+      <details>
+        <summary>He entrado en la tabla de récords. ¿Cómo escribo mi nombre?</summary>
+        <p>Salen tres ruedas de letras. Las flechas de arriba y abajo cambian la letra, y tocando
+           una rueda la seleccionas. Después, GRABAR.</p>
+      </details>
+
+      <details>
+        <summary>¿Quién es AMO?</summary>
+        <p>Nadie. Es la marca que trae puesta la máquina de fábrica, como venían las de verdad.
+           Está en las diecisiete y está para que la superes.</p>
+      </details>
+
+      <details>
+        <summary>He perdido mis récords.</summary>
+        <p>Las puntuaciones se guardan solo en el dispositivo. Si desinstalas la app o cambias de
+           móvil, se pierden. No hay copia en la nube porque la app no se conecta a internet.</p>
+      </details>
+
+      <details>
+        <summary>¿Por qué los juegos no se llaman como los originales?</summary>
+        <p>Porque aquellos nombres son marcas registradas de sus fabricantes. Las mecánicas son
+           libres; los nombres no. Los de aquí son propios.</p>
+      </details>
+
+      <details>
+        <summary>No suena nada.</summary>
+        <p>Mira la opción SONIDO del menú principal, y que el móvil no esté en silencio. Toda la
+           música se genera en el momento, no hay ficheros de audio que puedan faltar.</p>
+      </details>
+
+      <details>
+        <summary>¿La app recoge datos míos?</summary>
+        <p>No. Ninguno. Lo tienes detallado en la
+           <a href="salonrecreativo-privacidad.html">política de privacidad</a>.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Un fallo o una idea</h2>
+    <p class="intro">Si algo no funciona, cuéntame qué máquina era y qué estabas haciendo. Con eso
+       suele bastar para encontrarlo. Contesto yo, no hay formulario ni ticket.</p>
+    <a class="btn btn-primary" href="mailto:roberto34t10@gmail.com?subject=Sal%C3%B3n%20Recreativo">roberto34t10@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="salonrecreativo.html">← Salón Recreativo</a> ·
+    <a href="salonrecreativo-privacidad.html">Privacidad</a> ·
+    Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+<script>
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

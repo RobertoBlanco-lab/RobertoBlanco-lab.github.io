@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salón Recreativo — Política de privacidad · Roberto Blanco</title>
+<meta name="description" content="Salón Recreativo no recoge ningún dato personal. No se conecta a internet, no usa analítica ni publicidad y no pide permisos del sistema.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="en" href="en/salonrecreativo-privacidad.html">
+<link rel="alternate" hreflang="es" href="salonrecreativo-privacidad.html">
+<link rel="stylesheet" href="estilo.css?v=3">
+<style>
+  body { --acc: #5cff70; }
+  .btn-primary { color: #04210a; }
+  .destacado {
+    border:1px solid rgba(92,255,112,.35); border-radius:12px;
+    background:rgba(92,255,112,.06); padding:26px; text-align:center; margin:0 0 30px;
+  }
+  .destacado p { margin:0; font-size:19px; font-weight:700; color:var(--acc) }
+  .legal h3 { font-size:13px; letter-spacing:.24em; color:var(--acc); margin:34px 0 12px }
+  .legal ul { margin:0 0 16px; padding-left:22px; opacity:.85; line-height:1.75 }
+  .legal li { margin:0 0 8px }
+  .legal p { opacity:.85; line-height:1.75 }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <a href="salonrecreativo.html">Salón Recreativo</a>
+      <a href="salonrecreativo-soporte.html">Soporte</a>
+      <span class="idiomas"><b>ES</b><a href="en/salonrecreativo-privacidad.html">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:440px;height:440px;background:#5cff70;top:-140px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <h1>Política de privacidad</h1>
+    <div class="tag">Salón Recreativo</div>
+    <div class="meta">Última actualización · julio de 2026</div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev legal">
+
+    <div class="destacado">
+      <p>Esta aplicación no recoge ningún dato personal.</p>
+    </div>
+
+    <h3>QUÉ NO HACE</h3>
+    <ul>
+      <li>No se conecta a internet.</li>
+      <li>No usa analítica ni herramientas de medición.</li>
+      <li>No muestra publicidad.</li>
+      <li>No usa identificadores de seguimiento ni cookies.</li>
+      <li>No pide ningún permiso del sistema: ni cámara, ni micrófono, ni ubicación, ni contactos, ni notificaciones.</li>
+      <li>No hay cuentas, registro ni inicio de sesión.</li>
+      <li>No hay compras dentro de la aplicación.</li>
+    </ul>
+
+    <h3>QUÉ SE GUARDA</h3>
+    <p>Únicamente lo necesario para que la máquina recuerde tus partidas:</p>
+    <ul>
+      <li>Las <b>puntuaciones</b> de las tablas de récords.</li>
+      <li>Las <b>tres letras</b> que escribes al entrar en una tabla.</li>
+      <li>Si prefieres el <b>sonido</b> activado o desactivado.</li>
+    </ul>
+    <p>Todo eso se almacena <b>solo en tu dispositivo</b>, en el almacenamiento propio de la
+       aplicación. No sale de ahí, no se envía a ningún servidor y nadie más puede verlo —
+       tampoco yo. Al desinstalar la aplicación, esos datos se borran con ella.</p>
+
+    <h3>MENORES</h3>
+    <p>La aplicación es apta para todas las edades y no recoge datos, así que no recoge tampoco
+       datos de menores.</p>
+
+    <h3>TERCEROS</h3>
+    <p>No se comparte información con terceros, porque no hay información que compartir. La
+       aplicación no incorpora bibliotecas de publicidad, de analítica ni de redes sociales.</p>
+
+    <h3>CAMBIOS</h3>
+    <p>Si alguna versión futura cambiara algo de lo anterior, esta página se actualizará antes de
+       publicarla.</p>
+
+    <h3>CONTACTO</h3>
+    <p>Cualquier duda sobre privacidad:
+       <a href="mailto:roberto34t10@gmail.com">roberto34t10@gmail.com</a></p>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="salonrecreativo.html">← Salón Recreativo</a> ·
+    <a href="salonrecreativo-soporte.html">Soporte</a> ·
+    Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+<script>
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

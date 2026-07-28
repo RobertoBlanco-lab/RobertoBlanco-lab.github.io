@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salón Recreativo — Diecisiete máquinas de otra época · Roberto Blanco</title>
+<meta name="description" content="Un salón recreativo entero en el móvil: diecisiete máquinas con fósforo verde, tabla de récords y un chip de sonido que sintetiza la música en vivo. Sin anuncios, sin compras, sin conexión.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="en" href="en/salonrecreativo.html">
+<link rel="alternate" hreflang="es" href="salonrecreativo.html">
+<link rel="stylesheet" href="estilo.css?v=3">
+<style>
+  body { --acc: #5cff70; }
+  .btn-primary { color: #04210a; }
+  /* El marcador de las máquinas: rejilla de nombres con su año. */
+  .maquinas { display:grid; gap:26px; margin:26px 0 0 }
+  .familia b { display:block; font-size:12px; letter-spacing:.28em; color:var(--acc); margin-bottom:10px }
+  .familia ul { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px }
+  .familia li {
+    border:1px solid rgba(92,255,112,.28); border-radius:6px;
+    padding:6px 12px; font-size:14px; opacity:.86;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>IA privada on-device</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Analizador de voz</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Coach de voz</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Juego chill psicodélico</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Puzle de fusión neón</small></span></a>
+          <a href="salonrecreativo.html"><img src="img/salonrecreativo-icon.png" alt=""><span>Salón Recreativo<small>Diecisiete máquinas retro</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+      <span class="idiomas"><b>ES</b><a href="en/salonrecreativo.html">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:#5cff70;top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="img/salonrecreativo-icon.png" alt="Salón Recreativo">
+    <h1>Salón Recreativo</h1>
+    <div class="tag">Diecisiete máquinas. Una moneda.</div>
+    <div class="meta">Arcade · Gratis · iPhone, iPad y Mac</div>
+    <div class="cta">
+      <!-- Cuando Apple apruebe, cambia el href por la ficha directa de la app. -->
+      <a class="btn btn-primary" href="https://apps.apple.com/es/developer/roberto-blanco-gomez/id1824789786">Ver en la App Store</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Entras, y hay diecisiete máquinas encendidas.</h2>
+    <p class="intro">No es una colección de minijuegos con menú. Es <b>un mueble de recreativa</b>:
+       marquesina retroiluminada arriba, el tubo hundido con sus esquinas redondeadas, la ranura de
+       monedas abajo y el <b>INSERT COIN</b> parpadeando. Eliges máquina y el salón entero cambia de
+       juego, pero el mueble sigue ahí.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Tres generaciones</b>Las de fósforo verde de los setenta y ochenta, las tres del teléfono de teclas, y las de color de los dosmiles.</div>
+      <div class="rasgo"><b>Tabla de récords de fábrica</b>Cada máquina llega con cinco marcas puestas. Arriba del todo hay alguien llamado AMO. Está en las diecisiete.</div>
+      <div class="rasgo"><b>Sonido sintetizado en vivo</b>Ni un solo fichero de audio: un chip de tres canales genera la música y los efectos mientras juegas.</div>
+      <div class="rasgo"><b>Sin nada más</b>Sin anuncios, sin compras, sin cuentas, sin conexión. Abres y juegas.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Las diecisiete</h2>
+    <div class="maquinas">
+      <div class="familia">
+        <b>RECREATIVA · fósforo verde</b>
+        <ul>
+          <li>Invasión</li><li>Palas</li><li>Muro</li><li>Galaxias</li>
+          <li>Comepuntos</li><li>La Rana</li><li>Pozo</li><li>El Mono</li>
+        </ul>
+      </div>
+      <div class="familia">
+        <b>TELÉFONO · pantalla de teclas</b>
+        <ul><li>La Serpiente</li><li>Sector</li><li>Bote</li></ul>
+      </div>
+      <div class="familia">
+        <b>RECREATIVAS 2000 · color</b>
+        <ul>
+          <li>Enjambre</li><li>Bola de Nieve</li><li>Burbujas</li>
+          <li>Minas</li><li>Pinchos</li><li>Carretera</li>
+        </ul>
+      </div>
+    </div>
+    <p class="intro" style="margin-top:26px;font-size:15px;opacity:.75">
+      Los nombres son propios. Las mecánicas de aquellos años son libres; los nombres de sus
+      fabricantes, no.
+    </p>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <details class="tecnica">
+    <summary><span class="t"><b style="display:block">🔧 Para curiosos: cómo está hecho el salón</b><small style="display:block;margin-top:3px">SwiftUI, lienzo virtual y un chip de sonido — solo si te apetece profundizar</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">Diecisiete juegos distintos comparten un solo armazón. Casi todo el
+       trabajo estuvo en decidir qué es común y qué no.</p>
+    <div class="pipeline">
+      <div class="paso"><b>Un lienzo virtual fijo por máquina.</b> Cada juego simula sobre un tablero de medidas fijas y el mueble lo escala a la pantalla. Así la física no depende del tamaño de la ventana y los píxeles salen gordos a propósito, como en el tubo original.</div>
+      <div class="paso"><b>Dibujo y simulación, una sola definición.</b> La lección más cara de todo el desarrollo: cuando el dibujado describe el mundo por su cuenta y la física por la suya, aparecen troncos invisibles y ranas descolocadas ocho píxeles. Las vigas del Mono y la carretera se calculan una vez y de ahí bebe todo.</div>
+      <div class="paso"><b>Rejilla por celdas, no por distancia.</b> Comepuntos decide qué come y a dónde gira cuando <i>cambia de casilla</i>, no cuando se acerca a un centro. La primera versión oscilaba eternamente a menos de dos píxeles del punto y no se lo comía nunca.</div>
+      <div class="paso"><b>El chip vive en el hilo de audio.</b> El secuenciador corre dentro del bloque de renderizado de sonido; el hilo principal solo escribe un entero con la canción actual. Sin cerrojos y sin carreras de datos: siete melodías y siete efectos, todos generados muestra a muestra.</div>
+      <div class="paso"><b>Pseudo-3D para la carretera.</b> Lista de segmentos con curvatura acumulada, escala = profundidad / z, y el pintado de lejos a cerca. Al revés, la hierba de los segmentos lejanos tapa el asfalto que tienes delante — que es exactamente lo que pasaba en la primera versión.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Máquinas</span><b>17</b></div>
+      <div class="dato"><span>Tecnología</span><b>SwiftUI · Canvas a 60 fps</b></div>
+      <div class="dato"><span>Audio</span><b>Chip de 3 canales en tiempo real</b></div>
+      <div class="dato"><span>Datos recogidos</span><b>Ninguno</b></div>
+      <div class="dato"><span>Precio</span><b>Gratis</b></div>
+    </div>
+    </div>
+    </details>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>En pantalla</h2>
+    <div class="capturas">
+      <img src="img/salonrecreativo-1.png" alt="Salón Recreativo — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/salonrecreativo-2.png" alt="Salón Recreativo — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/salonrecreativo-3.png" alt="Salón Recreativo — captura 3" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/salonrecreativo-4.png" alt="Salón Recreativo — captura 4" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/es/developer/roberto-blanco-gomez/id1824789786">Ver en la App Store</a>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Ayuda y privacidad</h2>
+    <p class="intro">
+      ¿Dudas sobre los mandos, los récords o quién es AMO? Está todo en
+      <a href="salonrecreativo-soporte.html">la página de soporte</a>.
+      La <a href="salonrecreativo-privacidad.html">política de privacidad</a> cabe en una línea:
+      esta app no recoge ningún dato.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al portfolio</a> · Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+<script>
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
