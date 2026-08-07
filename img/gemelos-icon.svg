@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Gemelos de la Tierra">
+  <!--
+    El icono es un TRÁNSITO: un planeta cruzando por delante de su estrella.
+    No es una elección estética. Así se han encontrado casi todos los planetas
+    del catálogo — se mide cómo baja el brillo de la estrella cuando algo pasa
+    por delante, y de cuánto baja sale el radio del planeta. El icono cuenta el
+    método, no solo el tema.
+
+    El anillo punteado es la zona habitable, que es lo que la página calcula
+    estrella por estrella. Y el planeta está dentro de él a propósito.
+
+    Paleta: la de la web — verde #3ddc84, cian #5eead4, violeta #a78bfa.
+  -->
+  <defs>
+    <radialGradient id="estrella" cx="50%" cy="50%">
+      <stop offset="0%"   stop-color="#fff8e7"/>
+      <stop offset="35%"  stop-color="#ffe9a8"/>
+      <stop offset="100%" stop-color="#f9b44c"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%">
+      <stop offset="0%"   stop-color="#ffd98a" stop-opacity=".55"/>
+      <stop offset="60%"  stop-color="#f9b44c" stop-opacity=".13"/>
+      <stop offset="100%" stop-color="#f9b44c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="planeta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#5eead4"/>
+      <stop offset="55%"  stop-color="#3ddc84"/>
+      <stop offset="100%" stop-color="#1c6b57"/>
+    </linearGradient>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0e1a17"/>
+      <stop offset="100%" stop-color="#070b09"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#fondo)"/>
+
+  <!-- Estrellas de fondo: tamaños distintos, que un cielo de puntos iguales
+       se ve sintético al instante. -->
+  <g fill="#eef4f0">
+    <circle cx="78"  cy="92"  r="2.6" opacity=".75"/>
+    <circle cx="432" cy="128" r="1.8" opacity=".5"/>
+    <circle cx="120" cy="404" r="2.1" opacity=".6"/>
+    <circle cx="386" cy="426" r="1.5" opacity=".45"/>
+    <circle cx="248" cy="72"  r="1.6" opacity=".4"/>
+    <circle cx="60"  cy="250" r="1.7" opacity=".45"/>
+  </g>
+
+  <!-- La zona habitable: anillo punteado, en violeta para que no compita con
+       la estrella ni con el planeta. -->
+  <ellipse cx="256" cy="268" rx="176" ry="70"
+           fill="none" stroke="#a78bfa" stroke-opacity=".42"
+           stroke-width="5" stroke-dasharray="16 13"/>
+
+  <!-- La estrella, detrás -->
+  <circle cx="256" cy="268" r="150" fill="url(#halo)"/>
+  <circle cx="256" cy="268" r="86"  fill="url(#estrella)"/>
+
+  <!-- El planeta, cruzando por delante. Descentrado a la izquierda: en mitad
+       del tránsito, no empezándolo. -->
+  <circle cx="196" cy="252" r="40" fill="url(#planeta)"/>
+  <!-- El filo iluminado por su estrella: sin él, el planeta es un disco plano
+       y no una esfera. -->
+  <path d="M196 212a40 40 0 0 1 0 80a40 40 0 0 0 0-80z" fill="#d8fff2" opacity=".55"/>
+
+  <!-- La curva de luz: lo que de verdad se mide. El escalón es el tránsito. -->
+  <g stroke="#5eead4" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M96 404 h74 l10 26 h72 l10 -26 h74" opacity=".9"/>
+  </g>
+</svg>
