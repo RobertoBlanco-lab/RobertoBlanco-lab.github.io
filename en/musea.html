@@ -32,6 +32,16 @@
     width:28px; height:28px; border-radius:50%; display:grid; place-items:center;
     border:1px solid rgba(57,220,255,.35); color:var(--acc); font-size:13px; font-weight:700;
   }
+  /* Las capturas de esta ficha son de una ventana de Mac, no de un móvil. La
+     rejilla del resto del sitio dimensiona por ALTURA (460 px) y hace scroll
+     horizontal, que va perfecto con pantallas verticales; con estas, de 16:9,
+     saldrían tres tiras de 740 px de ancho y habría que arrastrar para verlas
+     enteras. Aquí van apiladas y a todo el ancho de la columna. */
+  .capturas { display:block; overflow:visible; padding:0; margin:26px 0 }
+  .capturas img { display:block; width:100%; height:auto; margin-bottom:18px;
+                  border-radius:14px; border-width:1px }
+  .capturas img:last-of-type { margin-bottom:0 }
+  .capturas img:hover { transform:none }
 </style>
 </head>
 <body>
@@ -175,10 +185,9 @@
   <div class="wrap rev">
     <h2>On screen</h2>
     <div class="capturas">
-      <img src="../img/musea-1.png" alt="MuSeA — screenshot 1" loading="lazy" onerror="this.style.display='none'">
-      <img src="../img/musea-2.png" alt="MuSeA — screenshot 2" loading="lazy" onerror="this.style.display='none'">
-      <img src="../img/musea-3.png" alt="MuSeA — screenshot 3" loading="lazy" onerror="this.style.display='none'">
-      <img src="../img/musea-4.png" alt="MuSeA — screenshot 4" loading="lazy" onerror="this.style.display='none'">
+      <img src="../img/musea-1.jpg" alt="MuSeA in the Neon Club scene: the city in blue and magenta, notes climbing the buildings" loading="lazy">
+      <img src="../img/musea-2.jpg" alt="MuSeA in the Laser scene: a wide view of the city, in green and cyan" loading="lazy">
+      <img src="../img/musea-3.jpg" alt="MuSeA in the VIP Gold scene: thick haze and golden light over the city" loading="lazy">
     </div>
     <a class="btn btn-primary" href="https://github.com/RobertoBlanco-lab/RobertoBlanco-lab.github.io/releases/download/musea-1.0/MuSeA.dmg">Download for Mac</a>
   </div>
