@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MuSeA — Tu música, convertida en una ciudad · Roberto Blanco</title>
+<meta name="description" content="Un visualizador musical para Mac: analiza la canción y levanta con ella una ciudad de neón que se mueve al compás. Gratis, sin cuentas y sin que tu música salga de tu ordenador.">
+<meta name="theme-color" content="#070910">
+<link rel="alternate" hreflang="en" href="en/musea.html">
+<link rel="alternate" hreflang="es" href="musea.html">
+<link rel="stylesheet" href="estilo.css?v=3">
+<style>
+  body { --acc: #39dcff; }
+  .btn-primary { color: #04212b; }
+  /* Debajo del botón: los requisitos, que aquí no son un detalle.
+     Es una app que se reparte fuera de la tienda; si alguien con un Mac
+     Intel se baja 120 MB para que no arranque, la culpa es de esta página. */
+  .requisitos { font-size:13px; opacity:.62; margin-top:12px; line-height:1.7 }
+  .requisitos b { color:var(--acc); font-weight:600 }
+  /* Las tres escenas, con su color real sacado de la app. */
+  .escenas { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; margin:26px 0 0 }
+  .escena { border:1px solid rgba(255,255,255,.10); border-radius:12px; padding:18px 20px; background:rgba(255,255,255,.02) }
+  .escena b { display:block; font-size:15px; margin-bottom:6px; color:var(--c) }
+  .escena span { font-size:14px; opacity:.72; line-height:1.6 }
+  .escena i { display:block; width:34px; height:3px; border-radius:2px; background:var(--c); margin-bottom:13px }
+  /* Los ocho mandos: nombre y qué hace, en una línea cada uno. */
+  .mandos { list-style:none; margin:22px 0 0; padding:0; display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:9px 22px }
+  .mandos li { font-size:14.5px; opacity:.82; padding-left:15px; position:relative; line-height:1.65 }
+  .mandos li::before { content:""; position:absolute; left:0; top:9px; width:5px; height:5px;
+                       border-radius:50%; background:var(--acc); opacity:.65 }
+  .mandos b { opacity:1; font-weight:600 }
+  /* Los tres pasos de instalación. */
+  .pasos { counter-reset:p; margin:22px 0 0; padding:0; list-style:none }
+  .pasos li { counter-increment:p; position:relative; padding:0 0 16px 44px; font-size:15px; line-height:1.7; opacity:.85 }
+  .pasos li::before {
+    content:counter(p); position:absolute; left:0; top:-2px;
+    width:28px; height:28px; border-radius:50%; display:grid; place-items:center;
+    border:1px solid rgba(57,220,255,.35); color:var(--acc); font-size:13px; font-weight:700;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>IA privada on-device</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Analizador de voz</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Coach de voz</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Juego chill psicodélico</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Puzle de fusión neón</small></span></a>
+          <a href="salonrecreativo.html"><img src="img/salonrecreativo-icon.png" alt=""><span>Salón Recreativo<small>Diecisiete máquinas retro</small></span></a>
+          <a href="musea.html"><img src="img/musea-icon.png" alt=""><span>MuSeA<small>Tu música como ciudad · Mac</small></span></a>
+          <a href="https://robertoblanco-lab.github.io/gemelos/"><img src="img/gemelos-icon.svg" alt=""><span>Gemelos de la Tierra<small>Herramienta web · 6.336 exoplanetas</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+      <span class="idiomas"><b>ES</b><a href="en/musea.html">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:#39dcff;top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="img/musea-icon.png" alt="MuSeA">
+    <h1>MuSeA</h1>
+    <div class="tag">Tu música, convertida en una ciudad.</div>
+    <div class="meta">Visualizador musical · Gratis · Solo para Mac</div>
+    <div class="cta">
+      <!-- ── EL ENLACE DE DESCARGA ───────────────────────────────────────────
+           Apunta a un archivo adjunto de una release de GitHub, no a un fichero
+           del repositorio: GitHub rechaza de plano cualquier archivo de más de
+           100 MB y el DMG anda por ahí. Las releases admiten hasta 2 GB.
+           Cuando saques una versión nueva, lo único que cambia es "musea-1.0"
+           por la etiqueta nueva. Está en dos sitios de esta página. -->
+      <a class="btn btn-primary" href="https://github.com/RobertoBlanco-lab/RobertoBlanco-lab.github.io/releases/download/musea-1.0/MuSeA.dmg">Descargar para Mac</a>
+    </div>
+    <div class="requisitos">
+      macOS 14 o posterior · <b>Mac con Apple Silicon</b> (M1 en adelante) · versión 1.0<br>
+      Firmada y notarizada por Apple. No está en la Mac App Store.
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Le das a una canción y aparece una ciudad.</h2>
+    <p class="intro">No es un dibujo que va al ritmo. MuSeA <b>escucha la canción entera antes de
+       empezar</b>: separa lo que suena, encuentra las notas y con eso levanta una ciudad donde cada
+       instrumento es un edificio y cada nota una ventana que se enciende. Luego la reproduce, y la
+       ciudad se mueve porque se está tocando la música que la construyó.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Cada instrumento, un edificio</b>La forma y la altura salen del análisis, no de un preajuste. Dos canciones distintas dan dos ciudades distintas.</div>
+      <div class="rasgo"><b>Tu música no va a ninguna parte</b>El análisis ocurre entero dentro de tu Mac. No hay cuenta, no hay nube, no hay que subir nada.</div>
+      <div class="rasgo"><b>Pensada para pantalla grande</b>Es solo para Mac a propósito: en un móvil no se ve la ciudad, se ve una mancha de luz.</div>
+      <div class="rasgo"><b>Gratis y sin nada dentro</b>Sin anuncios, sin compras, sin versión de pago escondida. Se descarga y funciona.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Tres ciudades distintas, no tres filtros</h2>
+    <p class="intro">Cada escena mueve ocho valores a la vez —atmósfera, resplandor, niebla, reflejo
+       del suelo, grano, aberración, órbita y distancia— así que no cambia el color: cambia el sitio.</p>
+    <div class="escenas">
+      <div class="escena" style="--c:#39dcff"><i></i><b>Neón Club</b><span>Azul de madrugada, reflejos mojados en el suelo y grano de película. La de casa.</span></div>
+      <div class="escena" style="--c:#65ffc0"><i></i><b>Láser</b><span>Aire limpio y la cámara más lejos: se ve la ciudad entera y los colores se abren en los bordes.</span></div>
+      <div class="escena" style="--c:#ffbf52"><i></i><b>VIP Gold</b><span>Niebla espesa, órbita lenta y mucho grano. Menos ciudad y más ambiente.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Y si quieres, lo mueves tú</h2>
+    <p class="intro">El panel <b>Estudio Deluxe</b> deja los ocho mandos a mano. No hace falta tocarlos
+       —las escenas ya son sitios acabados— pero están ahí para quien disfrute afinando.</p>
+    <ul class="mandos">
+      <li><b>Atmósfera</b> — cuánta luz flota en el aire</li>
+      <li><b>Resplandor</b> — el halo alrededor de cada ventana encendida</li>
+      <li><b>Niebla</b> — cuánto se traga el fondo a lo lejos</li>
+      <li><b>Reflejo</b> — el espejo del suelo, de seco a mojado</li>
+      <li><b>Grano</b> — textura de película sobre toda la imagen</li>
+      <li><b>Aberración</b> — cuánto se abre el color en los bordes</li>
+      <li><b>Órbita</b> — a qué velocidad gira la cámara</li>
+      <li><b>Distancia</b> — desde la calle hasta la vista de pájaro</li>
+    </ul>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Cómo instalarla</h2>
+    <ol class="pasos">
+      <li>Descarga el <b>.dmg</b> con el botón de arriba.</li>
+      <li>Ábrelo y arrastra <b>MuSeA</b> a la carpeta <b>Aplicaciones</b>.</li>
+      <li>Ábrela. La primera vez macOS te preguntará si estás seguro: es el aviso normal de cualquier
+          app descargada de internet. Dale a <b>Abrir</b>.</li>
+    </ol>
+    <p class="intro" style="margin-top:22px;font-size:15px;opacity:.75">
+      La app va firmada con mi certificado de desarrollador y notarizada por Apple, así que macOS la
+      reconoce y no aparece el aviso de "no se puede abrir porque procede de un desarrollador no
+      identificado". Si te sale, es que la descarga se cortó: bórrala y vuelve a bajarla.
+    </p>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <details class="tecnica">
+    <summary><span class="t"><b style="display:block">🔧 Para curiosos: cómo se construye la ciudad</b><small style="display:block;margin-top:3px">Análisis de audio, proyección 3D a mano y por qué no hay motor 3D — solo si te apetece profundizar</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">MuSeA nació como un script de Python. La versión de Mac
+       conserva ese motor de análisis y le pone alrededor una app de verdad, en vez de reescribir
+       de cero algo que ya funcionaba bien.</p>
+    <div class="pipeline">
+      <div class="paso"><b>El análisis va aparte, y a propósito.</b> Un ejecutable de Python empaquetado —con librosa dentro— analiza la canción y sirve el resultado por HTTP en tu propio ordenador. La app de Swift lo lanza, espera y le pregunta. Meter ese análisis en Swift habría sido meses; así la app existió en una tarde.</div>
+      <div class="paso"><b>Sin motor 3D.</b> La ciudad es un Canvas 2D con la proyección en perspectiva escrita a mano y los edificios pintados de lejos a cerca. Un motor real habría traído gigabytes de dependencias para dibujar cajas con ventanas.</div>
+      <div class="paso"><b>La niebla no puede tragarse la música.</b> La primera versión con niebla quedaba preciosa y parecía sorda: el velo comprimía el destello de cada nota hasta que ya no se distinguía el ritmo. Ahora las notas atraviesan la niebla —restan hasta un 80% de su densidad— y vuelve a verse tocar.</div>
+      <div class="paso"><b>El resplandor tenía marco.</b> El desenfoque del bloom se apoyaba en el borde del lienzo y dibujaba una línea de luz alrededor de la pantalla. Se arregla borrando tres píxeles de cada lado antes de desenfocar, que es la clase de detalle que no se ve hasta que se ve y luego no se puede dejar de ver.</div>
+      <div class="paso"><b>Notarización con cientos de binarios.</b> El Python empaquetado son unos 250 ficheros ejecutables. Apple exige que estén firmados uno a uno, de dentro hacia fuera, y que la app declare que necesita compilar en caliente —numba lo hace— o el análisis revienta al primer uso.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Plataforma</span><b>macOS 14+ · Apple Silicon</b></div>
+      <div class="dato"><span>Interfaz</span><b>AppKit + WKWebView</b></div>
+      <div class="dato"><span>Render</span><b>Canvas 2D · proyección propia</b></div>
+      <div class="dato"><span>Análisis</span><b>librosa, en local</b></div>
+      <div class="dato"><span>Reparto</span><b>DMG notarizado</b></div>
+      <div class="dato"><span>Precio</span><b>Gratis</b></div>
+    </div>
+    </div>
+    </details>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>En pantalla</h2>
+    <div class="capturas">
+      <img src="img/musea-1.png" alt="MuSeA — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/musea-2.png" alt="MuSeA — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/musea-3.png" alt="MuSeA — captura 3" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/musea-4.png" alt="MuSeA — captura 4" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://github.com/RobertoBlanco-lab/RobertoBlanco-lab.github.io/releases/download/musea-1.0/MuSeA.dmg">Descargar para Mac</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al portfolio</a> · Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+<script>
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
