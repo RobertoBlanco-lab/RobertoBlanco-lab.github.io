@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salón Recreativo — Seventeen machines from another era · Roberto Blanco</title>
-<meta name="description" content="A whole arcade in your pocket: seventeen machines with green phosphor, high-score tables and a sound chip that synthesises the music live. No ads, no purchases, no internet.">
+<title>Salón Recreativo — Sixteen machines from another era · Roberto Blanco</title>
+<meta name="description" content="A whole arcade in your pocket: sixteen machines with green phosphor, high-score tables and a sound chip that synthesises the music live. No ads, no purchases, no internet.">
 <meta name="theme-color" content="#070b09">
 <link rel="alternate" hreflang="en" href="salonrecreativo.html">
 <link rel="alternate" hreflang="es" href="../salonrecreativo.html">
@@ -34,7 +34,7 @@
           <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Voice coach</small></span></a>
           <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Chill psychedelic game</small></span></a>
           <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Neon fusion puzzle</small></span></a>
-          <a href="salonrecreativo.html"><img src="../img/salonrecreativo-icon.png" alt=""><span>Salón Recreativo<small>Seventeen retro machines</small></span></a>
+          <a href="salonrecreativo.html"><img src="../img/salonrecreativo-icon.png" alt=""><span>Salón Recreativo<small>Sixteen retro machines</small></span></a>
           <a href="musea.html"><img src="../img/musea-icon.png" alt=""><span>MuSeA<small>Your music as a city · Mac</small></span></a>
         </div>
       </div>
@@ -50,7 +50,7 @@
   <div class="wrap rev">
     <img class="icono" src="../img/salonrecreativo-icon.png" alt="Salón Recreativo">
     <h1>Salón Recreativo</h1>
-    <div class="tag">Seventeen machines. One coin.</div>
+    <div class="tag">Sixteen machines. One coin.</div>
     <div class="meta">Arcade · Free · iPhone, iPad and Mac</div>
     <div class="cta">
       <a class="btn btn-primary" href="https://apps.apple.com/app/salonrecreativo/id6795356219">Download free</a>
@@ -60,14 +60,14 @@
 
 <section class="bloque">
   <div class="wrap rev">
-    <h2>You walk in, and seventeen machines are already on.</h2>
+    <h2>You walk in, and sixteen machines are already on.</h2>
     <p class="intro">This isn't a bundle of mini-games behind a menu. It's <b>an arcade cabinet</b>:
        a backlit marquee up top, the recessed tube with its rounded corners, the coin slot below and
        <b>INSERT COIN</b> blinking away. Pick a machine and the whole hall switches game — but the
        cabinet stays.</p>
     <div class="rasgos">
       <div class="rasgo"><b>Three generations</b>The green-phosphor ones from the seventies and eighties, three from the era of keypad phones, and the colour ones from the 2000s.</div>
-      <div class="rasgo"><b>Factory high scores</b>Every machine ships with five scores already on the board. At the very top there's someone called AMO. He's on all seventeen.</div>
+      <div class="rasgo"><b>Factory high scores</b>Every machine ships with five scores already on the board. At the very top there's someone called AMO. He's on all sixteen.</div>
       <div class="rasgo"><b>Sound synthesised live</b>Not a single audio file: a three-channel chip generates the music and effects while you play.</div>
       <div class="rasgo"><b>And nothing else</b>No ads, no purchases, no accounts, no internet. Open it and play.</div>
     </div>
@@ -76,13 +76,13 @@
 
 <section class="bloque">
   <div class="wrap rev">
-    <h2>All seventeen</h2>
+    <h2>All sixteen</h2>
     <div class="maquinas">
       <div class="familia">
         <b>ARCADE · green phosphor</b>
         <ul>
           <li>Invasión</li><li>Palas</li><li>Muro</li><li>Galaxias</li>
-          <li>Comepuntos</li><li>La Rana</li><li>Pozo</li><li>El Mono</li>
+          <li>Comepuntos</li><li>Pozo</li><li>El Mono</li>
         </ul>
       </div>
       <div class="familia">
@@ -109,7 +109,7 @@
     <details class="tecnica">
     <summary><span class="t"><b style="display:block">🔧 For the curious: how the arcade is built</b><small style="display:block;margin-top:3px">SwiftUI, a virtual canvas and a sound chip — only if you fancy going deeper</small></span><i>▾</i></summary>
     <div class="tecnica-cuerpo">
-    <p class="intro" style="margin-top:14px">Seventeen different games share a single frame. Almost all the work
+    <p class="intro" style="margin-top:14px">Sixteen different games share a single frame. Almost all the work
        went into deciding what is common and what isn't.</p>
     <div class="pipeline">
       <div class="paso"><b>A fixed virtual canvas per machine.</b> Each game simulates on a board of fixed dimensions and the cabinet scales it to the screen. That way the physics don't depend on window size, and the pixels come out chunky on purpose — like the original tube.</div>
@@ -119,7 +119,7 @@
       <div class="paso"><b>Pseudo-3D for the road.</b> A segment list with accumulated curvature, scale = depth / z, and painting far to near. The other way round, the grass of distant segments paints over the asphalt right in front of you — which is exactly what the first version did.</div>
     </div>
     <div class="ficha">
-      <div class="dato"><span>Machines</span><b>17</b></div>
+      <div class="dato"><span>Machines</span><b>16</b></div>
       <div class="dato"><span>Technology</span><b>SwiftUI · Canvas at 60 fps</b></div>
       <div class="dato"><span>Audio</span><b>3-channel chip, real time</b></div>
       <div class="dato"><span>Data collected</span><b>None</b></div>
