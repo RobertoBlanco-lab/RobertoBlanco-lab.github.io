@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operación Cruz de Águila — Diez mundos, tres vidas · Roberto Blanco</title>
+<meta name="description" content="Matamarcianos vertical para iPhone: diez mundos, diez jefes y una curva de dificultad que cuesta pero se puede. Sin anuncios, sin compras, sin conexión.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="en" href="en/cruzdeaguila.html">
+<link rel="alternate" hreflang="es" href="cruzdeaguila.html">
+<link rel="stylesheet" href="estilo.css?v=3">
+<style>
+  body { --acc: #ffc94a; }
+  .btn-primary { color: #241400; }
+  /* El parte de mundos: diez filas numeradas con su escenario y su luz. */
+  .mundos { display:grid; gap:8px; margin:24px 0 0; max-width:760px }
+  .mundo {
+    display:flex; align-items:baseline; gap:14px;
+    border:1px solid rgba(255,201,74,.20); border-radius:8px;
+    padding:11px 16px; background:rgba(255,201,74,.035);
+  }
+  .mundo i { font-style:normal; font-weight:800; color:var(--acc); font-size:12px; letter-spacing:.1em; min-width:30px }
+  .mundo b { font-weight:700 }
+  .mundo small { margin-left:auto; font-size:13px; opacity:.6 }
+  @media (max-width:560px) {
+    .mundo { flex-wrap:wrap }
+    .mundo small { margin-left:44px; width:100% }
+  }
+  /* Los cinco papeles de enemigo. */
+  .roles { display:grid; gap:10px; margin:22px 0 0; max-width:760px }
+  .rol { border-left:2px solid rgba(255,201,74,.45); padding:2px 0 2px 16px }
+  .rol b { display:block; color:var(--acc); font-size:12px; letter-spacing:.22em; text-transform:uppercase }
+  .rol span { display:block; opacity:.85; line-height:1.7; margin-top:4px }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>IA privada on-device</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Analizador de voz</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Coach de voz</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Juego chill psicodélico</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Puzle de fusión neón</small></span></a>
+          <a href="salonrecreativo.html"><img src="img/salonrecreativo-icon.png" alt=""><span>Salón Recreativo<small>Dieciséis máquinas retro</small></span></a>
+          <a href="musea.html"><img src="img/musea-icon.png" alt=""><span>MuSeA<small>Tu música como ciudad · Mac</small></span></a>
+          <a href="cruzdeaguila.html"><img src="img/cruzdeaguila-icon.png" alt=""><span>Cruz de Águila<small>Matamarcianos vertical</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#contacto">Contacto</a>
+      <span class="idiomas"><b>ES</b><a href="en/cruzdeaguila.html">EN</a></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:#ffc94a;top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="img/cruzdeaguila-icon.png" alt="Operación Cruz de Águila">
+    <h1>Operación Cruz de Águila</h1>
+    <div class="tag">Diez mundos. Tres vidas.</div>
+    <div class="meta">Matamarcianos · Gratis · iPhone</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="https://apps.apple.com/es/app/cruz-de-aguila/id6810407525">Descargar gratis</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Que cueste, pero que se pueda.</h2>
+    <p class="intro">Un matamarcianos vertical de los de siempre: tu nave sube, todo lo demás baja,
+       y el dedo no se levanta de la pantalla. Lo que no es de siempre es la parte que de verdad
+       se sufría en los recreativos — aquí, <b>morir en la fase ocho no te devuelve a la uno</b>.
+       Las fases se desbloquean, y la partida siguiente arranca donde llegaste y con el disparo
+       que esa fase espera.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Diez mundos, diez jefes</b>Cada fase estrena escenario, música y enemigos, y se cierra con algo grande que no cabe en la pantalla.</div>
+      <div class="rasgo"><b>Cinco escalones de disparo</b>El arma sube cuando limpias formaciones enteras. Y baja cuando te dan: cada muerte cuesta potencia, no solo una vida.</div>
+      <div class="rasgo"><b>Se nota en la mano</b>Cada impacto, cada explosión y cada muerte tienen su vibración. Con el móvil en silencio el juego sigue contándote lo que pasa.</div>
+      <div class="rasgo"><b>Sin nada más</b>Sin anuncios, sin compras, sin cuentas, sin conexión. Abres y juegas.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Los diez mundos</h2>
+    <div class="mundos">
+      <div class="mundo"><i>01</i><b>Campo de asteroides</b><small>estrella cercana</small></div>
+      <div class="mundo"><i>02</i><b>Cementerio de naves</b><small>espacio profundo</small></div>
+      <div class="mundo"><i>03</i><b>Ciudad cibernética</b><small>luz plena</small></div>
+      <div class="mundo"><i>04</i><b>Mar de dunas</b><small>sombra del planeta</small></div>
+      <div class="mundo"><i>05</i><b>Estación enemiga</b><small>espacio profundo</small></div>
+      <div class="mundo"><i>06</i><b>Astillero orbital</b><small>tormenta iónica</small></div>
+      <div class="mundo"><i>07</i><b>Dique seco</b><small>sombra del planeta</small></div>
+      <div class="mundo"><i>08</i><b>Línea de montaje</b><small>espacio profundo</small></div>
+      <div class="mundo"><i>09</i><b>Sala de turbinas</b><small>tormenta iónica</small></div>
+      <div class="mundo"><i>10</i><b>Corazón de la fortaleza</b><small>espacio profundo</small></div>
+    </div>
+    <p class="intro" style="margin-top:26px;font-size:15px;opacity:.75">
+      Y en todos, algo que no se puede destruir: asteroides, chatarra, planchas de dique.
+      Eso no se dispara, eso se esquiva.
+    </p>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Quién te espera</h2>
+    <div class="roles">
+      <div class="rol"><b>Carne de cañón</b><span>Bajan en formación y no disparan. Están para que tu arma suba — si te los cargas enteros.</span></div>
+      <div class="rol"><b>Tirador</b><span>Apunta a donde estás, no a donde mira. Moverse en línea recta delante de uno es la peor idea del juego.</span></div>
+      <div class="rol"><b>Tanque</b><span>Aguanta más de lo que parece y suelta obuses lentos y gordos. Se ven venir; el problema es que llenan el hueco por donde ibas.</span></div>
+      <div class="rol"><b>Kamikaze</b><span>No dispara. Se te echa encima.</span></div>
+      <div class="rol"><b>Torreta</b><span>Gira sobre sí misma y va soltando aspas en la dirección que le toca. A partir de la fase ocho, tres a la vez.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <details class="tecnica">
+    <summary><span class="t"><b style="display:block">🔧 Para curiosos: cómo está equilibrado</b><small style="display:block;margin-top:3px">Swift, una tabla de diez filas y dos errores que costaron caros — solo si te apetece profundizar</small></span><i>▾</i></summary>
+    <div class="tecnica-cuerpo">
+    <p class="intro" style="margin-top:14px">Un matamarcianos no se hace difícil añadiendo enemigos. Se hace
+       difícil sabiendo exactamente cuánto fuego cabe en la pantalla y cuánto tiempo tienes para salir de él.</p>
+    <div class="pipeline">
+      <div class="paso"><b>La dificultad es una tabla, no código.</b> Diez filas y cinco columnas: velocidad de bala, ráfaga, vida del enemigo, densidad de oleada y pausa entre oleadas. Ajustar una fase es cambiar un número — y hay pruebas automáticas que comprueban que la curva nunca va hacia atrás.</div>
+      <div class="paso"><b>El juego se puede probar sin abrirlo.</b> Las reglas viven en un paquete Swift aparte que no sabe dibujar: no depende de SpriteKit ni de la pantalla. Por eso el equilibrio de las diez fases se verificó en un terminal, con la curva entera impresa, antes de tocar el teléfono.</div>
+      <div class="paso"><b>La lección más cara.</b> Arrancar en la fase siete daba el disparo de la fase uno: un proyectil cada 0,17 segundos contra una fase calibrada para cuatro cada 0,11. No era «más difícil», era siete veces menos fuego. Ahora el arma arranca en el escalón que esa fase espera.</div>
+      <div class="paso"><b>La segunda más cara.</b> El ritmo de asteroides se apretaba según lo bien que ibas — lo cual tiene sentido para todo lo que se puede disparar, y ninguno para lo que no. Jugar bien te llenaba la pantalla de planchas indestructibles. Ahora los obstáculos dependen solo de la fase.</div>
+      <div class="paso"><b>La vibración se cuelga donde el juego ya avisa.</b> La escena ya sacude la pantalla en cada explosión, cada impacto y cada alarma; los hápticos se enganchan ahí, y la fuerza de la sacudida elige sola qué golpe toca. Si mañana se borra ese fichero, el juego vuelve a ser exactamente el que era.</div>
+      <div class="paso"><b>Los fondos y la música salen de un script.</b> Los diez escenarios los pinta un generador que ilumina sólidos facetados y cierra el bucle vertical sin costura. El audio, igual: la guitarra distorsionada es una onda saturada por software, y está ecualizada para el altavoz de un móvil — no para unos cascos, que fue justo el error de la primera mezcla.</div>
+    </div>
+    <div class="ficha">
+      <div class="dato"><span>Fases</span><b>10, cada una con jefe</b></div>
+      <div class="dato"><span>Vidas</span><b>3 · las fases se desbloquean</b></div>
+      <div class="dato"><span>Tecnología</span><b>SpriteKit + SwiftUI · 60 fps</b></div>
+      <div class="dato"><span>Audio</span><b>Generado con código</b></div>
+      <div class="dato"><span>Datos recogidos</span><b>Ninguno</b></div>
+      <div class="dato"><span>Precio</span><b>Gratis</b></div>
+    </div>
+    </div>
+    </details>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>En pantalla</h2>
+    <div class="capturas">
+      <img src="img/cruzdeaguila-1.png" alt="Operación Cruz de Águila — captura 1" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/cruzdeaguila-2.png" alt="Operación Cruz de Águila — captura 2" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/cruzdeaguila-3.png" alt="Operación Cruz de Águila — captura 3" loading="lazy" onerror="this.style.display='none'">
+      <img src="img/cruzdeaguila-4.png" alt="Operación Cruz de Águila — captura 4" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <a class="btn btn-primary" href="https://apps.apple.com/es/app/cruz-de-aguila/id6810407525">Descargar gratis</a>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Ayuda y privacidad</h2>
+    <p class="intro">
+      ¿Dudas sobre los mandos, el disparo o por qué has vuelto a empezar en la fase seis? Está todo en
+      <a href="cruzdeaguila-soporte.html">la página de soporte</a>.
+      La <a href="cruzdeaguila-privacidad.html">política de privacidad</a> cabe en una línea:
+      esta app no recoge ningún dato.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Volver al portfolio</a> · Roberto Blanco — desarrollador indie · España
+  </div>
+</footer>
+<script>
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>

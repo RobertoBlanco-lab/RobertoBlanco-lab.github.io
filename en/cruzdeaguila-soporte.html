@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operation Eagle Cross — Support · Roberto Blanco</title>
+<meta name="description" content="Help for Operation Eagle Cross: controls, weapon levels, unlocked stages, sound and a direct line to the developer.">
+<meta name="theme-color" content="#070b09">
+<link rel="alternate" hreflang="en" href="cruzdeaguila-soporte.html">
+<link rel="alternate" hreflang="es" href="../cruzdeaguila-soporte.html">
+<link rel="stylesheet" href="../estilo.css?v=3">
+<style>
+  body { --acc: #ffc94a; }
+  .btn-primary { color: #241400; }
+  .faq { display:grid; gap:14px; margin-top:22px }
+  .faq details {
+    border:1px solid rgba(255,201,74,.22); border-radius:10px;
+    padding:16px 18px; background:rgba(255,201,74,.03);
+  }
+  .faq summary { cursor:pointer; font-weight:700; color:var(--acc); list-style:none }
+  .faq summary::-webkit-details-marker { display:none }
+  .faq summary::after { content:" ▾"; opacity:.6 }
+  .faq details[open] summary::after { content:" ▴" }
+  .faq p { margin:12px 0 0; opacity:.85; line-height:1.7 }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <a href="cruzdeaguila.html">Eagle Cross</a>
+      <a href="index.html#contacto">Contact</a>
+      <span class="idiomas"><a href="../cruzdeaguila-soporte.html">ES</a><b>EN</b></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:440px;height:440px;background:#ffc94a;top:-140px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <h1>Support</h1>
+    <div class="tag">Operation Eagle Cross</div>
+    <div class="meta">Ten stages · No ads, no purchases, no internet</div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>Frequently asked</h2>
+    <div class="faq">
+
+      <details open>
+        <summary>How do I play?</summary>
+        <p>Drag your finger across the screen. The ship sits slightly above your finger — on
+           purpose, so you don't cover it — and it <b>fires by itself</b>: there is no fire button.
+           The whole game is dodging and positioning.</p>
+      </details>
+
+      <details>
+        <summary>What are the weapon levels?</summary>
+        <p>Your gun has five. It goes up when you clear a whole formation, and it <b>goes down when
+           you get hit</b>. That's why dying costs double: a life and your firepower. If you
+           suddenly can't kill anything, check your weapon level before blaming the stage.</p>
+      </details>
+
+      <details>
+        <summary>I died on stage eight. Do I go back to stage one?</summary>
+        <p>No. Stages unlock as you reach them, and the next run starts at the furthest one you got
+           to, with the firepower that stage expects. You get three lives per run, but the progress
+           stays.</p>
+      </details>
+
+      <details>
+        <summary>Some things won't die no matter how much I shoot.</summary>
+        <p>Correct: asteroids, scrap and dock plating are obstacles, not enemies. No amount of
+           firepower helps — you dodge those.</p>
+      </details>
+
+      <details>
+        <summary>There's no sound.</summary>
+        <p>Check the phone's silent switch: the game respects that switch on purpose, so you can
+           play anywhere. And if you already had music playing in another app, the game won't cut
+           it off — its own music stays quiet instead.</p>
+      </details>
+
+      <details>
+        <summary>It doesn't vibrate.</summary>
+        <p>The fine haptics need the iPhone's haptic engine. There's also a setting for it in the
+           game, kept separate from sound on purpose: with the phone on silent you can still play
+           and feel every hit.</p>
+      </details>
+
+      <details>
+        <summary>What does the rank at the end mean?</summary>
+        <p>It comes from how you finish: the lives you have left and the weapon level you arrive
+           with. S means finishing intact and at full power. The fact that C exists is information
+           too.</p>
+      </details>
+
+      <details>
+        <summary>I lost my high score.</summary>
+        <p>Scores and unlocked stages are stored on the device only. If you uninstall the app or
+           change phones, they're gone. There is no cloud backup because the app never connects to
+           the internet.</p>
+      </details>
+
+      <details>
+        <summary>Does the app collect my data?</summary>
+        <p>No. None. It's all detailed in the
+           <a href="cruzdeaguila-privacidad.html">privacy policy</a>.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>A bug or an idea</h2>
+    <p class="intro">If something doesn't work, tell me which stage you were on and what you were
+       doing. That's usually enough to find it. And if a stage feels impossible, say so: that
+       balance is one number away from changing.</p>
+    <a class="btn btn-primary" href="mailto:roberto34t10@gmail.com?subject=Operation%20Eagle%20Cross">roberto34t10@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="cruzdeaguila.html">← Operation Eagle Cross</a> ·
+    <a href="cruzdeaguila-privacidad.html">Privacy</a> ·
+    Roberto Blanco — indie developer · Spain
+  </div>
+</footer>
+<script>
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
