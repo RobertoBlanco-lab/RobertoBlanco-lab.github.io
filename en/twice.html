@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>twice — an operating system from scratch · Roberto Blanco</title>
+<meta name="description" content="twice: an operating system written entirely from scratch, with zero external dependencies. A custom hypervisor and three kernels (Mach-O, PE, ELF) that turn into a private file search appliance for macOS. Download the .dmg.">
+<meta name="theme-color" content="#070b09">
+<meta name="google" content="notranslate">
+<link rel="alternate" hreflang="es" href="../twice.html">
+<link rel="alternate" hreflang="en" href="twice.html">
+<link rel="stylesheet" href="../estilo.css?v=3">
+<style>
+  body { --acc: var(--naranja); }
+  .diploma { border: 1px solid var(--border); border-radius: 22px; overflow: hidden; background: linear-gradient(180deg, rgba(251,191,109,.06), rgba(13,18,16,.85)); }
+  .diploma .cima { text-align: center; padding: 34px 24px 26px; border-bottom: 1px solid var(--border); }
+  .diploma .sello { display: inline-block; font-size: .78rem; letter-spacing: .18em; text-transform: uppercase; color: var(--acc); border: 1px solid var(--acc); border-radius: 999px; padding: 5px 16px; margin-bottom: 18px; }
+  .diploma .nota { font-size: clamp(2.6rem, 8vw, 4.2rem); font-weight: 800; letter-spacing: -.03em; line-height: 1; }
+  .diploma .nota span { color: var(--acc); }
+  .diploma .honor { margin-top: 10px; color: var(--text); font-weight: 700; font-size: 1.05rem; }
+  .diploma .honor small { display: block; color: var(--muted); font-weight: 500; margin-top: 4px; font-size: .82rem; }
+  .diploma .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: 1px; background: var(--border); }
+  .diploma .stat { background: rgba(13,18,16,.9); padding: 22px 14px; text-align: center; }
+  .diploma .stat b { display: block; font-size: 1.7rem; font-weight: 800; letter-spacing: -.03em; }
+  .diploma .stat span { color: var(--muted); font-size: .8rem; }
+  .desglose { color: var(--muted); font-size: .92rem; text-align: center; padding: 20px 24px; border-top: 1px solid var(--border); }
+  .desglose b { color: var(--text); }
+  .comprob { list-style: none; padding: 22px 26px 28px; margin: 0; border-top: 1px solid var(--border); }
+  .comprob li { position: relative; padding: 7px 0 7px 28px; color: var(--text); font-size: .96rem; }
+  .comprob li::before { content: "✓"; position: absolute; left: 0; color: var(--acc); font-weight: 800; }
+  .legal { border: 1px solid var(--border); border-radius: 16px; padding: 24px 26px; background: rgba(13,18,16,.6); color: var(--muted); font-size: .92rem; line-height: 1.6; }
+  .legal b { color: var(--text); }
+  .talento { border: 1px solid var(--acc); border-radius: 20px; padding: 34px 30px; background: linear-gradient(180deg, rgba(251,191,109,.08), rgba(13,18,16,.85)); }
+  .talento h2 { margin-bottom: 10px; }
+  .talento p { color: var(--muted); max-width: 640px; }
+  .talento .cta { margin-top: 22px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">Roberto <span>Blanco</span></a>
+    <nav>
+      <div class="desplegable" id="desp">
+        <button type="button" id="desp-btn">Apps ▾</button>
+        <div class="menu-apps">
+          <a href="twice.html"><img src="../img/twice.png" alt=""><span>twice<small>Operating system · private search</small></span></a>
+          <a href="syntheticmind.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/72/7c/f2/727cf237-06a4-beca-4abe-5a998495147d/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg" alt=""><span>SyntheticMind<small>Private on-device AI</small></span></a>
+          <a href="neurovocal.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b8/6d/ca/b86dca0c-19b8-f1c6-e2ab-cde97e799351/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeuroVocal Studio<small>Voice analyzer</small></span></a>
+          <a href="voicecoach.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a7/39/cf/a739cf47-2b2b-734f-2761-186f62d339f5/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>VoiceCoachAI<small>Voice coach</small></span></a>
+          <a href="neoblob.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/61/b1/4f/61b14f1b-1e18-7cfd-af2a-4382b732e5a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeoBlob<small>Psychedelic chill game</small></span></a>
+          <a href="neonpulse.html"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1c/1c/a9/1c1ca937-e7cb-6a88-bb3a-62b5ebc5504b/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg" alt=""><span>NeonPulse<small>Neon merge puzzle</small></span></a>
+        </div>
+      </div>
+      <a href="index.html#servicios">Services</a>
+      <a href="index.html#contacto">Contact</a>
+      <span class="idiomas"><a href="../twice.html" id="lang-es">ES</a><b>EN</b></span>
+    </nav>
+  </div>
+</header>
+
+<div class="hero-app">
+  <div class="orbe" style="width:500px;height:500px;background:var(--naranja);top:-120px;left:50%;transform:translateX(-50%)"></div>
+  <div class="wrap rev">
+    <img class="icono" src="../img/twice.png" alt="twice">
+    <h1>twice</h1>
+    <div class="tag">An operating system from scratch. A private search engine for your files.</div>
+    <div class="meta">Operating system · macOS 11+ (Apple Silicon) · .dmg 36 MB · no dependencies</div>
+    <div class="cta">
+      <a class="btn btn-primary" href="../twice.dmg" download>Download twice (.dmg)</a>
+      <a class="btn btn-ghost" href="#diploma">See the diploma</a>
+    </div>
+  </div>
+</div>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>What twice is</h2>
+    <p class="intro">Most search tools on the Mac read an index you don't control. <b>twice does the opposite</b>:
+       it's a whole operating system —written from scratch, without a single third-party library— dedicated to one thing,
+       finding your files instantly, and doing it <b>locally, with nothing ever leaving your computer</b>.
+       You open the app and land straight in the search. No accounts, no cloud, no terminal.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Searches inside, not just names</b>Reads the text of your PDFs and documents and finds by what you wrote inside, not just the file name.</div>
+      <div class="rasgo"><b>Everything stays on your Mac</b>No server, no account, no telemetry. The index lives on your disk and only you see it.</div>
+      <div class="rasgo"><b>Its own index</b>It doesn't use Spotlight or anything from the system: twice builds and stores its own index, and that's why it can be this fast.</div>
+      <div class="rasgo"><b>An appliance, not a terminal</b>Double-click and you're searching. The complexity inside —a hypervisor and three kernels— you never see.</div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque" id="diploma">
+  <div class="wrap rev">
+    <h2>The diploma</h2>
+    <p class="intro">My first operating system, with a small project audit: what it has, how much code, and what's verified.</p>
+    <div class="diploma">
+      <div class="cima">
+        <div class="sello">Project certificate</div>
+        <div class="nota">9.6 <span>/ 10</span></div>
+        <div class="honor">Highest honours · Distinction
+          <small>10 for ambition and execution</small>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>~19,200</b><span>lines of code</span></div>
+        <div class="stat"><b>3</b><span>kernels</span></div>
+        <div class="stat"><b>83</b><span>tests</span></div>
+        <div class="stat"><b>0</b><span>dependencies</span></div>
+        <div class="stat"><b>~17 h</b><span>of work</span></div>
+      </div>
+      <div class="desglose">
+        <b>16,720</b> lines of Rust (63 files) · <b>1,209</b> of C and assembly · <b>1,249</b> of Python and shell
+        — all from scratch, without a single external dependency, in about 17 hours.
+      </div>
+      <ul class="comprob">
+        <li>Boots on ARM64; three kernels isolated by hardware (stage&nbsp;2)</li>
+        <li>Runs real Apple (Mach-O), Microsoft (PE) and Linux (ELF) binaries</li>
+        <li>Its own filesystem with an on-disk search index</li>
+        <li>Searches inside PDFs and documents, private and local</li>
+        <li>Graphical explorer, mouse and clipboard shared with the Mac</li>
+        <li>Packaged as a self-contained macOS app, with its icon</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <div class="legal">
+      <b>© 2026 Roberto Blanco Gómez. All rights reserved.</b><br>
+      "twice" and its code are the original work of the author. The method, internal design and implementation
+      details —the <b>"how it was done"</b>— are reserved as proprietary and confidential knowledge, and are not
+      granted under this release. The program is offered for use; reproduction, reverse engineering or distribution
+      without express written permission is prohibited.
+    </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <div class="talento">
+      <h2>Looking for talent?</h2>
+      <p>I built this in about 17 hours, alone, depending on nothing external: a hypervisor, three kernels,
+         Mach-O, PE and ELF loaders, a filesystem with its own index, and macOS packaging.
+         If your team needs someone who can go down to this level —Rust, systems, performance, on-device—
+         and still ship product, let's talk.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="mailto:roberto34t10@gmail.com?subject=twice%20%C2%B7%20let's%20talk">Email me</a>
+        <a class="btn btn-ghost" href="index.html#apps">See the rest of my work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">← Back to the portfolio</a> · Roberto Blanco — indie developer · Spain
+  </div>
+</footer>
+
+<script>
+  const desp = document.getElementById("desp");
+  document.getElementById("desp-btn").onclick = e => { e.stopPropagation(); desp.classList.toggle("abierto"); };
+  document.addEventListener("click", () => desp.classList.remove("abierto"));
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visto"); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".rev").forEach(el => io.observe(el));
+</script>
+<script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
