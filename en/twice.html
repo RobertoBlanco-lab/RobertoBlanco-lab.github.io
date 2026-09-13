@@ -66,9 +66,10 @@
     <img class="icono" src="../img/twice.png" alt="twice">
     <h1>twice</h1>
     <div class="tag">An operating system from scratch. A private search engine for your files.</div>
-    <div class="meta">Operating system · macOS 11+ (Apple Silicon) · .dmg 36 MB · no dependencies</div>
+    <div class="meta">Operating system · macOS 11+ (Apple Silicon) and Windows 10/11 (64-bit) · no dependencies</div>
     <div class="cta">
-      <a class="btn btn-primary" href="../twice.dmg" download>Download twice (.dmg)</a>
+      <a class="btn btn-primary" href="../twice.dmg" download>Download for Mac (.dmg, 36 MB)</a>
+      <a class="btn btn-ghost" href="../twice-windows.zip" download>Download for Windows (.zip, 0.9 MB)</a>
     </div>
   </div>
 </div>
@@ -76,13 +77,13 @@
 <section class="bloque">
   <div class="wrap rev">
     <h2>What twice is</h2>
-    <p class="intro">Most search tools on the Mac read an index you don't control. <b>twice does the opposite</b>:
+    <p class="intro">Most search tools that come with your computer read an index you don't control. <b>twice does the opposite</b>:
        it's a whole operating system —written from scratch, without a single third-party library— dedicated to one thing,
        finding your files instantly, and doing it <b>locally, with nothing ever leaving your computer</b>.
        You open the app and land straight in the search. No accounts, no cloud, no terminal.</p>
     <div class="rasgos">
       <div class="rasgo"><b>Searches inside, not just names</b>Reads the text of your PDFs and documents and finds by what you wrote inside, not just the file name.</div>
-      <div class="rasgo"><b>Everything stays on your Mac</b>No server, no account, no telemetry. The index lives on your disk and only you see it.</div>
+      <div class="rasgo"><b>Everything stays on your computer</b>No server, no account, no telemetry. The index lives on your disk and only you see it.</div>
       <div class="rasgo"><b>Its own index</b>It doesn't use Spotlight or anything from the system: twice builds and stores its own index, and that's why it can be this fast.</div>
       <div class="rasgo"><b>An appliance, not a terminal</b>Double-click and you're searching. The complexity inside —a hypervisor and three kernels— you never see.</div>
     </div>
@@ -101,6 +102,23 @@
       <div class="rasgo"><b>Searches inside, not just names</b>It reads the text of your PDFs and documents and finds by what you wrote inside, not just the file name.</div>
       <div class="rasgo"><b>Local and instant</b>The index lives on your disk, no cloud or accounts, and answers the moment you release the key.</div>
     </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>On Windows too</h2>
+    <p class="intro">twice isn't a Mac app ported to Windows: it's <b>the same operating system, the same
+       binary</b>. It's ARM64 inside, so on a PC it runs emulated —and it still finds your files instantly,
+       because what makes search fast isn't the CPU, it's the index.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Double-click and go</b>Unzip and open twice.exe. The first run downloads what it needs to execute; after that it opens straight into the search.</div>
+      <div class="rasgo"><b>Your Documents, read-only</b>It reads the text of your files so it can search them, and changes none of them. You can point it at any other folder instead.</div>
+      <div class="rasgo"><b>Copy and paste with Windows</b>Ctrl+C puts a result's path on the Windows clipboard; Ctrl+V brings whatever you copied into the search box.</div>
+      <div class="rasgo"><b>Nothing installed system-wide</b>It lives entirely in its own folder. No registry, no services, no administrator rights. Delete the folder and it's gone.</div>
+    </div>
+    <p class="intro">Tested on 64-bit Windows 10 and 11, from a laptop over ten years old to current
+       machines. No graphics card and no BIOS virtualization needed: the faster the CPU, the smoother it runs.</p>
   </div>
 </section>
 

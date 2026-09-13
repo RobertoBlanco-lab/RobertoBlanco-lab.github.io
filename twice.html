@@ -71,9 +71,10 @@
     <img class="icono" src="img/twice.png" alt="twice">
     <h1>twice</h1>
     <div class="tag">Un sistema operativo desde cero. Un buscador privado de tus archivos.</div>
-    <div class="meta">Sistema operativo · macOS 11+ (Apple Silicon) · .dmg 36 MB · sin dependencias</div>
+    <div class="meta">Sistema operativo · macOS 11+ (Apple Silicon) y Windows 10/11 (64 bits) · sin dependencias</div>
     <div class="cta">
-      <a class="btn btn-primary" href="twice.dmg" download>Descargar twice (.dmg)</a>
+      <a class="btn btn-primary" href="twice.dmg" download>Descargar para Mac (.dmg, 36 MB)</a>
+      <a class="btn btn-ghost" href="twice-windows.zip" download>Descargar para Windows (.zip, 0,9 MB)</a>
     </div>
   </div>
 </div>
@@ -81,13 +82,13 @@
 <section class="bloque">
   <div class="wrap rev">
     <h2>Qué es twice</h2>
-    <p class="intro">La mayoría de buscadores del Mac miran un índice que no controlas. <b>twice hace lo contrario</b>:
+    <p class="intro">La mayoría de buscadores que trae tu ordenador miran un índice que no controlas. <b>twice hace lo contrario</b>:
        es un sistema operativo entero —escrito desde cero, sin una sola librería de terceros— que se dedica a una cosa,
        encontrar tus archivos al instante, y a hacerlo <b>en local, sin que nada salga de tu ordenador</b>.
        Abres la app y entra directo al buscador. Sin cuentas, sin nube, sin terminal.</p>
     <div class="rasgos">
       <div class="rasgo"><b>Busca dentro, no solo el nombre</b>Mira el texto de tus PDF y documentos y encuentra por lo que pusiste dentro, no solo por cómo se llama el fichero.</div>
-      <div class="rasgo"><b>Todo se queda en tu Mac</b>No hay servidor, no hay cuenta, no hay telemetría. El índice vive en tu disco y solo tú lo ves.</div>
+      <div class="rasgo"><b>Todo se queda en tu ordenador</b>No hay servidor, no hay cuenta, no hay telemetría. El índice vive en tu disco y solo tú lo ves.</div>
       <div class="rasgo"><b>Su propio índice</b>No usa Spotlight ni nada del sistema: twice construye y guarda su propio índice, y por eso puede ir tan rápido.</div>
       <div class="rasgo"><b>Un aparato, no una terminal</b>Doble clic y estás buscando. La complejidad de dentro —un hipervisor y tres kernels— no la ves nunca.</div>
     </div>
@@ -106,6 +107,24 @@
       <div class="rasgo"><b>Busca dentro, no solo el nombre</b>Lee el texto de tus PDF y documentos y encuentra por lo que escribiste dentro, no solo por cómo se llama el fichero.</div>
       <div class="rasgo"><b>Todo local y al momento</b>El índice vive en tu disco, sin nube ni cuentas, y responde en cuanto sueltas la tecla.</div>
     </div>
+  </div>
+</section>
+
+<section class="bloque">
+  <div class="wrap rev">
+    <h2>También en Windows</h2>
+    <p class="intro">twice no es una app de Mac portada a Windows: es <b>el mismo sistema operativo, el mismo
+       binario</b>. Por dentro es ARM64, así que en un PC se ejecuta emulado —y aun así encuentra tus
+       archivos al instante, porque lo caro de buscar no es la CPU, es el índice.</p>
+    <div class="rasgos">
+      <div class="rasgo"><b>Doble clic y ya</b>Descomprime el zip y abre twice.exe. La primera vez se descarga solo lo que necesita para ejecutarse; después arranca directo en el buscador.</div>
+      <div class="rasgo"><b>Tus Documentos, en solo lectura</b>Lee el texto de tus ficheros para poder buscarlos y no toca ninguno. Puedes darle cualquier otra carpeta si lo prefieres.</div>
+      <div class="rasgo"><b>Copiar y pegar con Windows</b>Ctrl+C se lleva la ruta de un resultado al portapapeles de Windows; Ctrl+V trae lo que tengas copiado a la búsqueda.</div>
+      <div class="rasgo"><b>Sin instalar nada en el sistema</b>Vive entero en su carpeta. No toca el registro, no deja servicios, no pide permisos de administrador. Se borra borrando la carpeta.</div>
+    </div>
+    <p class="intro">Probado en Windows 10 y 11 de 64 bits, desde un portátil de hace más de diez años
+       hasta equipos actuales. No hace falta tarjeta gráfica ni activar la virtualización en la BIOS:
+       cuanto más rápida sea la CPU, más suave va.</p>
   </div>
 </section>
 
