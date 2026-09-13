@@ -310,6 +310,7 @@
     Roberto Blanco — indie developer · Spain<br>
     <a href="https://apps.apple.com/developer/id1824789786">All my apps on the App Store</a>
     · <a href="https://robertoblanco-lab.github.io/syntheticmind-web/">SyntheticMind Web</a>
+    <div id="visitas" style="margin-top:12px; opacity:.55; font-size:.85rem" hidden></div>
   </div>
 </footer>
 
@@ -364,6 +365,21 @@
   }
 </script>
 <script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+// Visit counter: the number is fetched and written in the site's own type.
+// The badge image GoatCounter serves is dark purple on transparent, which is
+// invisible on this background — and it counted this page only, not the site.
+fetch('https://robertoblancogomez.goatcounter.com/counter/TOTAL.json')
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => {
+    const n = Number(d.count_unique ?? d.count);
+    if (!Number.isFinite(n) || n <= 0) return;
+    const e = document.getElementById('visitas');
+    e.textContent = n.toLocaleString('en-GB') + ' visits';
+    e.hidden = false;
+  })
+  .catch(() => {});
+</script>
 
 </body>
 </html>

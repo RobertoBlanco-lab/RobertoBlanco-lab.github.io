@@ -318,7 +318,7 @@
     Roberto Blanco — desarrollador indie · España<br>
     <a href="https://apps.apple.com/es/developer/roberto-blanco-gomez/id1824789786">Todas mis apps en el App Store</a>
     · <a href="https://robertoblanco-lab.github.io/syntheticmind-web/">SyntheticMind Web</a><br>
-    <img src="https://robertoblancogomez.goatcounter.com/counter//.svg" alt="visitas" style="margin-top:12px; height:22px; opacity:.65" onerror="this.style.display='none'">
+    <div id="visitas" style="margin-top:12px; opacity:.55; font-size:.85rem" hidden></div>
   </div>
 </footer>
 
@@ -390,6 +390,22 @@
 
 <!-- Contador de visitas: GoatCounter (sin cookies, sin rastreo personal) -->
 <script data-goatcounter="https://robertoblancogomez.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+// El número de visitas se pide y se escribe con la tipografía de la casa.
+// Antes se incrustaba la imagen que da GoatCounter, pero viene con el texto
+// en morado oscuro sobre fondo transparente: encima de este fondo oscuro no
+// se veía nada. Además contaba solo esta página, no el sitio entero.
+fetch('https://robertoblancogomez.goatcounter.com/counter/TOTAL.json')
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => {
+    const n = Number(d.count_unique ?? d.count);
+    if (!Number.isFinite(n) || n <= 0) return;
+    const e = document.getElementById('visitas');
+    e.textContent = n.toLocaleString('es-ES') + ' visitas';
+    e.hidden = false;
+  })
+  .catch(() => {});
+</script>
 
 </body>
 </html>
