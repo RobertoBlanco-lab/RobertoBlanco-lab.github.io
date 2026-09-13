@@ -115,10 +115,16 @@
       <div class="rasgo"><b>A real installer</b>Double-click to install, get a desktop shortcut, remove it from «Installed apps». It asks for no administrator rights and touches nothing system-wide: nothing to configure, nothing else to download.</div>
       <div class="rasgo"><b>Your Documents, read-only</b>It reads the text of your files so it can search them, and changes none of them. You can point it at any other folder instead.</div>
       <div class="rasgo"><b>Copy and paste with Windows</b>Ctrl+C puts a result's path on the Windows clipboard; Ctrl+V brings whatever you copied into the search box.</div>
-      <div class="rasgo"><b>Nothing installed system-wide</b>It lives entirely in its own folder. No registry, no services, no administrator rights. Delete the folder and it's gone.</div>
+      <div class="rasgo"><b>Yours only</b>It installs for your user, not for the whole machine. No services left running, no administrator rights, and uninstalling removes all of it — it even asks whether to delete the index.</div>
     </div>
     <p class="intro">Tested on 64-bit Windows 10 and 11, from a laptop over ten years old to current
        machines. No graphics card and no BIOS virtualization needed: the faster the CPU, the smoother it runs.</p>
+    <p class="intro">The first time, Windows will warn you: "Windows protected your PC — Unknown publisher".
+       That appears for any program without a signing certificate, which costs a few hundred euros a year;
+       twice doesn't have one yet. To continue: <b>More info</b>, then <b>Run anyway</b>. If you'd rather
+       check for yourself that the file is mine and nothing touched it on the way, here is its SHA-256 —in
+       PowerShell, <span class="mono">Get-FileHash twice-setup.exe</span>:</p>
+    <p class="intro"><span class="mono">a7c22f377e1f576015c9f3fb86f9041756c2b37cee3621356dd7bcf10c9032d6</span></p>
   </div>
 </section>
 

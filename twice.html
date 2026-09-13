@@ -120,11 +120,18 @@
       <div class="rasgo"><b>Instalador, como cualquier programa</b>Se instala con doble clic, deja su acceso directo en el escritorio y se quita desde «Aplicaciones instaladas». No pide permisos de administrador y no toca el sistema: no hay nada que configurar ni que descargar aparte.</div>
       <div class="rasgo"><b>Tus Documentos, en solo lectura</b>Lee el texto de tus ficheros para poder buscarlos y no toca ninguno. Puedes darle cualquier otra carpeta si lo prefieres.</div>
       <div class="rasgo"><b>Copiar y pegar con Windows</b>Ctrl+C se lleva la ruta de un resultado al portapapeles de Windows; Ctrl+V trae lo que tengas copiado a la búsqueda.</div>
-      <div class="rasgo"><b>Sin instalar nada en el sistema</b>Vive entero en su carpeta. No toca el registro, no deja servicios, no pide permisos de administrador. Se borra borrando la carpeta.</div>
+      <div class="rasgo"><b>Solo para ti</b>Se instala en tu usuario, no para todo el equipo. No deja servicios corriendo ni pide permisos de administrador, y al desinstalarlo se va entero: te pregunta incluso si quiere que borre el índice.</div>
     </div>
     <p class="intro">Probado en Windows 10 y 11 de 64 bits, desde un portátil de hace más de diez años
        hasta equipos actuales. No hace falta tarjeta gráfica ni activar la virtualización en la BIOS:
        cuanto más rápida sea la CPU, más suave va.</p>
+    <p class="intro">La primera vez, Windows avisará: «Windows protegió su PC — Editor desconocido».
+       Es lo que sale con cualquier programa que no lleve un certificado de firma, que cuesta unos
+       cientos de euros al año; twice todavía no lo tiene. Para continuar: <b>Más información</b> y
+       luego <b>Ejecutar de todas formas</b>. Si prefieres comprobar por tu cuenta que el fichero es
+       el mío y nadie lo ha tocado por el camino, este es su SHA-256 —en PowerShell,
+       <span class="mono">Get-FileHash twice-setup.exe</span>:</p>
+    <p class="intro"><span class="mono">a7c22f377e1f576015c9f3fb86f9041756c2b37cee3621356dd7bcf10c9032d6</span></p>
   </div>
 </section>
 
